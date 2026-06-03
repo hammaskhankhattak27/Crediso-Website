@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/*  Brand fonts                                                         */
+/*  Drop the licensed font files into /fonts/ with these exact      */
+/*  names (woff2 preferred) and they will be picked up automatically.   */
+/*  Until then, the fallbacks declared in tailwind.config.ts render.    */
+/*  See public/fonts/README.md for the full file list.                  */
+/* ------------------------------------------------------------------ */
+
+/* ITC Avant Garde Gothic Std — headings / UI */
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src: url("/fonts/AvantGardeGothic-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src: url("/fonts/AvantGardeGothic-Demi.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src: url("/fonts/AvantGardeGothic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Avenir — body copy */
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter fallback (also pulled from Google Fonts in index.html if desired) */
+
+@layer base {
+  :root {
+    --page-px: clamp(1.25rem, 4vw, 3rem);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink-soft font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  /* Keep negative letter-spacing tracking from Figma on big display type */
+  .tracking-display {
+    letter-spacing: -0.04em;
+  }
+}
+
+@layer components {
+  /* Horizontal page gutter + centred max width, reused by every section */
+  .section-shell {
+    @apply mx-auto w-full max-w-page px-[var(--page-px)];
+  }
+
+  /* Pill button base */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill font-display
+           font-semibold transition-all duration-200 ease-out;
+  }
+  .btn-lg {
+    @apply px-7 py-4 text-lg;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-paper hover:opacity-90;
+  }
+  .btn-outline {
+    @apply btn border border-ink text-ink-soft hover:bg-ink hover:text-paper;
+  }
+  .btn-outline-light {
+    @apply btn border border-paper text-paper hover:bg-paper hover:text-ink;
+  }
+}
+
+/* Hide horizontal scrollbar on the marquee track */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
