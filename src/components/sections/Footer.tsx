@@ -23,72 +23,77 @@ export function Footer() {
         src="/assets/images/hero-circle.png"
         alt=""
         aria-hidden="true"
-        className="absolute right-6 -top-24 z-20 h-44 w-44 animate-[spin_24s_linear_infinite] md:right-16 md:-top-32 md:h-56 md:w-56 lg:right-28"
+        className="absolute right-6 -top-20 z-20 h-40 w-40 animate-[spin_24s_linear_infinite] sm:right-12 md:h-52 md:w-52 md:-top-28 lg:right-[9%] lg:-top-32 lg:h-64 lg:w-64"
       />
 
-      <div className="section-shell py-16 md:py-20">
-        {/* Headline */}
-        <h2 className="font-display text-[clamp(2.25rem,5vw,3.9rem)] leading-[1.02] tracking-tight text-ink-soft">
-          <span className="font-bold">DON'T BE </span>
-          <span className="font-light">SHY, </span>
-          <span className="font-bold">SAY HI</span>
-        </h2>
+      <div className="section-shell pb-8 pt-24 md:pt-28">
+        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-8">
+          {/* Left — headline, subtext, contact row */}
+          <div>
+            <h2 className="font-display text-[clamp(2.25rem,5vw,3.9rem)] leading-[1.02] tracking-tight text-ink-soft lg:whitespace-nowrap">
+              <span className="font-bold">DON’T BE </span>
+              <span className="font-light">SHY, </span>
+              <span className="font-bold">SAY HI</span>
+            </h2>
 
-        <p className="mt-5 max-w-md font-body text-lg text-ink-soft">
-          Nimm Kontakt auf und lass uns über dein Projekt quatschen. Ruf uns an oder nutze das
-          Kontaktformular.
-        </p>
+            <p className="mt-7 max-w-md font-body text-lg leading-relaxed text-ink-soft">
+              Nimm Kontakt auf und lass uns über dein Projekt quatschen. Ruf uns an oder nutze das
+              Kontaktformular.
+            </p>
 
-        {/* Contact row + socials, divided by a bottom border */}
-        <div className="mt-12 flex flex-col gap-10 border-b-2 border-ink-soft pb-10 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-9">
-            <Button href="#contact">Zum Kontaktformular</Button>
-            <a
-              href="mailto:hallo@crediso.io"
-              className="font-display text-xl font-semibold text-ink-soft hover:text-teal-deep"
-            >
-              hallo@crediso.io
-            </a>
-            <a
-              href="tel:+436648898239"
-              className="font-display text-xl font-semibold text-ink-soft hover:text-teal-deep"
-            >
-              +43 664 889 823 95
-            </a>
+            <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-9">
+              <Button href="#contact">Zum Kontaktformular</Button>
+              <a
+                href="mailto:hallo@crediso.io"
+                className="font-display text-xl font-semibold text-ink-soft hover:text-teal-deep"
+              >
+                hallo@crediso.io
+              </a>
+              <a
+                href="tel:+436648898239"
+                className="font-display text-xl font-semibold text-ink-soft hover:text-teal-deep"
+              >
+                +43 664 889 823 95
+              </a>
+            </div>
           </div>
 
-          {/* Social buttons stacked vertically */}
-          <div className="flex flex-col gap-3 lg:items-end">
+          {/* Socials — stacked, top-aligned with the subtext */}
+          <div className="flex flex-col gap-4 lg:mt-[88px] lg:items-end">
             {SOCIALS.map(({ label, Icon, href }) => (
               <a
                 key={label}
                 href={href}
-                className="inline-flex w-[150px] items-center gap-3 rounded-pill border-2 border-ink-soft px-4 py-1.5 font-display text-base font-semibold text-ink-soft transition-colors hover:bg-ink-soft hover:text-mint"
+                className="inline-flex w-[150px] items-center gap-2.5 rounded-pill border-2 border-ink-soft px-3 py-1.5 transition-colors hover:bg-white/40"
               >
-                <Icon className="h-[18px] w-[18px] shrink-0" />
-                <span className="flex-1 text-right">{label}</span>
+                <span className="flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-md bg-ink-soft text-mint">
+                  <Icon className="h-3.5 w-3.5" />
+                </span>
+                <span className="font-display text-[15px] font-semibold text-ink-soft">{label}</span>
               </a>
             ))}
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-body text-sm font-extrabold text-ink-soft">
-            © 2025 - Crediso Media GmbH | Alle Rechte vorbehalten
-          </p>
-          <ul className="flex gap-7">
-            {LEGAL.map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
-                  className="font-body text-base font-extrabold text-graphite hover:text-ink-soft"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
+        {/* Divider + bottom bar */}
+        <div className="mt-20 border-t-2 border-ink-soft pt-6 lg:mt-28">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-body text-sm font-extrabold text-ink-soft">
+              © 2025 - Crediso Media GmbH | Alle Rechte vorbehalten
+            </p>
+            <ul className="flex gap-8">
+              {LEGAL.map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="font-body text-base font-extrabold text-graphite hover:text-ink-soft"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { GoogleG, Stars } from "@/components/ui/Icons";
 
-// Ordered to match the Figma grid (4 rows × 3 columns):
+// Ordered to match the Figma grid grid-cols-1 (4 rows × 3 columns):
 // H+S, GRAZ, MORAWA / AMS, giga sport, NEUROTH /
 // Börni, 3 Goldene Kugeln, JUMP25 / Schloss Vasoldsberg, tierlando, Projekt Wohnen
 const LOGO_ROWS = [
@@ -13,12 +13,12 @@ const LOGO_ROWS = [
 
 export function SocialProof() {
   return (
-    <section className="section-shell py-16 md:py-24">
+    <section className="section-shell section-y">
       {/* Two columns, vertically centred against each other (Figma alignItems: center) */}
-      <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-24">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-24">
         {/* Left — heading, rating, CTA */}
         <div className="flex flex-col">
-          <h2 className="font-display text-[clamp(2rem,5vw,4rem)] font-bold leading-[1.08] tracking-display text-ink">
+          <h2 className="h-display text-ink">
             Unternehmen
             <br />
             die auf uns zählen.
@@ -35,7 +35,7 @@ export function SocialProof() {
           </div>
 
           <div className="mt-10 lg:mt-[108px]">
-            <Button href="#testimonials" variant="outline">
+            <Button href="#testimonials" variant="outline" size="md">
               Was Kund:innen über uns sagen?
             </Button>
           </div>

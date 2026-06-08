@@ -4,30 +4,48 @@
 
 /* ------------------------------------------------------------------ */
 /*  Brand fonts                                                         */
-/*  Drop the licensed font files into /fonts/ with these exact      */
-/*  names (woff2 preferred) and they will be picked up automatically.   */
-/*  Until then, the fallbacks declared in tailwind.config.ts render.    */
-/*  See public/fonts/README.md for the full file list.                  */
+/*  ITC Avant Garde Gothic Std (headings / UI) is licensed and bundled  */
+/*  under /public/fonts/. Avenir (body) falls back to Nunito Sans /     */
+/*  Inter until its files are added.                                    */
 /* ------------------------------------------------------------------ */
 
 /* ITC Avant Garde Gothic Std — headings / UI */
 @font-face {
   font-family: "ITC Avant Garde Gothic Std";
-  src: url("/fonts/AvantGardeGothic-Medium.woff2") format("woff2");
+  src: url("/fonts/ITCAvantGardeStd-XLt.woff2") format("woff2"),
+    url("/fonts/ITCAvantGardeStd-XLt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src: url("/fonts/ITCAvantGardeStd-Bk.woff2") format("woff2"),
+    url("/fonts/ITCAvantGardeStd-Bk.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std";
+  src: url("/fonts/ITCAvantGardeStd-Md.woff2") format("woff2"),
+    url("/fonts/ITCAvantGardeStd-Md.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "ITC Avant Garde Gothic Std";
-  src: url("/fonts/AvantGardeGothic-Demi.woff2") format("woff2");
+  src: url("/fonts/ITCAvantGardeStd-Demi.woff2") format("woff2"),
+    url("/fonts/ITCAvantGardeStd-Demi.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "ITC Avant Garde Gothic Std";
-  src: url("/fonts/AvantGardeGothic-Bold.woff2") format("woff2");
+  src: url("/fonts/ITCAvantGardeStd-Bold.woff2") format("woff2"),
+    url("/fonts/ITCAvantGardeStd-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -36,15 +54,36 @@
 /* Avenir — body copy */
 @font-face {
   font-family: "Avenir";
-  src: url("/fonts/Avenir-Medium.woff2") format("woff2");
+  src: url("/fonts/Avenir-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Regular.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("/fonts/Avenir-Heavy.woff2") format("woff2");
+  src: url("/fonts/Avenir-Heavy.ttf") format("truetype");
   font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Black.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -58,19 +97,25 @@
 
   html {
     scroll-behavior: smooth;
+    @apply overflow-x-clip;
   }
 
+  /* Copy text is Avenir (LT Std) Book at graphite #333 per the brand spec. */
   body {
-    @apply bg-paper text-ink-soft font-body antialiased;
+    @apply bg-paper text-graphite font-body antialiased;
+    /* clip (not hidden) keeps decorative overhangs from causing horizontal
+       scroll on mobile without breaking the sticky navbar */
+    @apply overflow-x-clip;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
+  /* Headlines are always pure black (#000), full heading — never a tinted/partial accent. */
   h1,
   h2,
   h3,
   h4 {
-    @apply font-display;
+    @apply font-display text-ink;
     text-wrap: balance;
   }
 
@@ -84,6 +129,21 @@
   /* Horizontal page gutter + centred max width, reused by every section */
   .section-shell {
     @apply mx-auto w-full max-w-page px-[var(--page-px)];
+  }
+
+  /* Consistent vertical rhythm for every section */
+  .section-y {
+    @apply py-16 md:py-24;
+  }
+
+  /* Shared display headings — two sizes matching the Figma type scale (64 / 52px) */
+  .h-display {
+    @apply font-display text-[clamp(2rem,5vw,4rem)] font-bold leading-[1.1];
+    letter-spacing: -0.04em;
+  }
+  .h-display-sm {
+    @apply font-display text-[clamp(1.9rem,4vw,3.25rem)] font-bold leading-[1.12];
+    letter-spacing: -0.04em;
   }
 
   /* Pill button base */

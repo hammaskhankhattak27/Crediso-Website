@@ -27,7 +27,7 @@ function MarqueeRow({ words, reverse = false }: { words: string[]; reverse?: boo
 
 export function Ticker() {
   return (
-    <section className="relative overflow-hidden bg-paper py-16 md:py-24">
+    <section className="relative overflow-hidden bg-paper section-y">
       {/* Two mint bands crossing on the diagonal, like the Figma. */}
       <div className="relative">
         <div className="relative z-10 -ml-[15%] w-[130%] rotate-3">

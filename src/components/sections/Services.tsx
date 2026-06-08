@@ -4,14 +4,14 @@ const SIDE_SERVICES = ["SEO & GEO", "Social Media", "Google Ads", "Video & Foto"
 
 export function Services() {
   return (
-    <section id="services" className="section-shell py-16 md:py-24">
-      <h2 className="font-display text-[clamp(2rem,5vw,4rem)] font-bold tracking-display text-ink">
+    <section id="services" className="section-shell section-y">
+      <h2 className="h-display text-ink">
         Unsere Leistungen
       </h2>
 
-      <div className="mt-10 grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
+      <div className="mt-10 grid grid-cols-1 items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
         {/* Feature card */}
-        <article className="flex min-h-[424px] flex-col justify-between rounded-card bg-mint p-8 md:p-12">
+        <article className="flex min-h-[424px] flex-col justify-between rounded-card bg-mint p-8">
           <div>
             <h3 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] text-ink">
               Webdesign &amp;<br />Entwicklung
@@ -23,7 +23,9 @@ export function Services() {
             </p>
           </div>
           <div className="mt-8">
-            <Button variant="outline">Mehr erfahren</Button>
+            <Button variant="outline" size="md">
+              Mehr erfahren
+            </Button>
           </div>
         </article>
 

@@ -42,7 +42,7 @@ function PersonCard({ person }: { person: Person }) {
         <br />
         {person.last}
       </h3>
-      <div className="mt-3 font-inter text-[17px] font-light leading-[30px] text-ink">
+      <div className="mt-3 font-body text-[17px] font-light leading-[30px] text-ink">
         <p>{person.role}</p>
         <p>
           <a href={`mailto:${person.email}`} className="hover:text-teal-deep">
@@ -63,13 +63,13 @@ export function Contact() {
   const [agreed, setAgreed] = useState(false);
 
   return (
-    <section id="contact" className="bg-paper-warm py-16 md:py-24">
+    <section id="contact" className="bg-paper-warm section-y">
       <div className="section-shell">
         {/* Heading + form share the left column so the avatars centre against the
             full section height (heading included), like the Figma. */}
-        <div className="grid gap-16 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="lg:max-w-[760px]">
-            <h2 className="font-display text-[clamp(2rem,4.5vw,4rem)] font-bold leading-[1.12] tracking-display text-ink">
+            <h2 className="h-display text-ink">
               Melde dich jetzt!
               <br />
               Wir freuen uns auf dich!

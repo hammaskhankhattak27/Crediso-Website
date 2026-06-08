@@ -27,8 +27,8 @@ const CERTS: Cert[] = [
 
 export function Certifications() {
   return (
-    <section className="section-shell py-16 md:py-24">
-      <div className="grid gap-6 lg:grid-cols-3">
+    <section className="section-shell section-y">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {CERTS.map((cert) => (
           <article
             key={cert.title}

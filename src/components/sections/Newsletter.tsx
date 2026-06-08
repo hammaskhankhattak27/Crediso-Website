@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { ArrowUpRight } from "@/components/ui/Icons";
+import { Button } from "@/components/ui/Button";
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
 
   return (
-    <section className="section-shell py-16 md:py-24">
-      <div className="grid items-center gap-12 lg:grid-cols-2">
+    <section className="section-shell section-y">
+      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <div className="flex flex-col gap-3">
-          <h2 className="font-display text-[clamp(2rem,4.5vw,4rem)] font-bold leading-[1.08] tracking-display text-ink">
+          <h2 className="h-display text-ink">
             Mehr Anfragen, mehr Sichtbarkeit, mehr Umsatz.
           </h2>
           <p className="font-display text-2xl font-medium text-ink md:text-3xl">
@@ -32,13 +32,9 @@ export function Newsletter() {
                 className="w-full bg-transparent py-3.5 font-body text-lg text-ink-soft placeholder:text-slate focus:outline-none"
               />
             </div>
-            <button
-              type="submit"
-              className="group inline-flex items-center justify-center gap-2 rounded-pill bg-ink px-7 py-4 font-display text-lg font-semibold text-paper transition-opacity hover:opacity-90"
-            >
+            <Button type="submit" className="shrink-0">
               einreichen
-              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </button>
+            </Button>
           </form>
 
           <p className="mt-4 font-body text-base text-ink">

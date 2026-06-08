@@ -24,17 +24,15 @@ function VideoCard({ image }: { image: string }) {
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="section-shell py-16 md:py-24">
-      <h2 className="text-center font-display text-[clamp(1.9rem,4vw,3.25rem)] font-bold leading-[1.1] tracking-display text-ink">
-        Was unsere Kund:innen sagen
-      </h2>
+    <section id="testimonials" className="section-shell section-y">
+      <h2 className="h-display-sm text-center text-ink">Was unsere Kund:innen sagen</h2>
 
-      <div className="mt-12 flex snap-x gap-5 overflow-x-auto pb-4 no-scrollbar">
+      <div className="mt-10 flex snap-x gap-5 overflow-x-auto pb-4 no-scrollbar">
         {/* Card 1 — video */}
         <VideoCard image="/assets/images/testimonial-1.png" />
 
         {/* Card 2 — mint quote card */}
-        <article className="flex aspect-[426/572] w-[300px] shrink-0 snap-start flex-col justify-between rounded-3xl bg-mint p-7 sm:w-[360px] lg:w-[426px]">
+        <article className="flex aspect-[426/572] w-[300px] shrink-0 snap-start flex-col justify-between rounded-3xl bg-mint p-8 sm:w-[360px] lg:w-[426px]">
           <div>
             <img
               src="/assets/images/clients/client-1.png"
@@ -66,7 +64,7 @@ export function Testimonials() {
         <VideoCard image="/assets/images/testimonial-3.png" />
 
         {/* Card 4 — teal quote card */}
-        <article className="relative flex aspect-[426/572] w-[300px] shrink-0 snap-start flex-col justify-between overflow-hidden rounded-3xl bg-teal-deep p-7 text-paper sm:w-[360px] lg:w-[426px]">
+        <article className="relative flex aspect-[426/572] w-[300px] shrink-0 snap-start flex-col justify-between overflow-hidden rounded-3xl bg-teal-deep p-8 text-paper sm:w-[360px] lg:w-[426px]">
           <p className="relative z-10 font-display text-xl font-semibold leading-snug lg:text-2xl">
             {QUOTE}
           </p>

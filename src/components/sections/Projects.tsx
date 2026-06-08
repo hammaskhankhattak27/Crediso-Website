@@ -41,9 +41,9 @@ export function Projects() {
   const visible = PROJECTS.filter((p) => tagMatches(p.tags, active));
 
   return (
-    <section id="projects" className="section-shell py-16 md:py-24">
+    <section id="projects" className="section-shell section-y">
       <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <h2 className="font-display text-[clamp(2rem,5vw,4rem)] font-bold tracking-display text-ink">
+        <h2 className="h-display text-ink">
           Unsere Projekte
         </h2>
 
@@ -66,7 +66,7 @@ export function Projects() {
         </div>
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((project) => (
           <article key={project.title} className="flex flex-col">
             <div className="relative overflow-hidden rounded-card">

@@ -25,9 +25,10 @@ export default {
         "mint-soft": "#C0EDD0",
         sage: "#D3DED9",
         teal: "#5FBDAE",
-        "teal-deep": "#037361",
+        "teal-deep": "#067361",
         "green-900": "#003229",
         "green-950": "#002112",
+        "green-ink": "#12211F", // near-black green for headings/stat values on light surfaces (Google Ads landing)
         // Accents
         lavender: "#D4C7FA",
         sun: "#F3E200",

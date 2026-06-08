@@ -1,43 +1,39 @@
-import { Navbar } from "@/components/sections/Navbar";
-import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { Services } from "@/components/sections/Services";
-import { CtaBanner } from "@/components/sections/CtaBanner";
-import { Projects } from "@/components/sections/Projects";
-import { Offers } from "@/components/sections/Offers";
-import { Sustainability } from "@/components/sections/Sustainability";
-import { Newsletter } from "@/components/sections/Newsletter";
-import { Certifications } from "@/components/sections/Certifications";
-import { SocialProof } from "@/components/sections/SocialProof";
-import { Ticker } from "@/components/sections/Ticker";
-import { Blog } from "@/components/sections/Blog";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Contact } from "@/components/sections/Contact";
-import { Footer } from "@/components/sections/Footer";
+import type { ReactElement } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout } from "@/components/Layout";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { Home } from "@/pages/Home";
+import { GoogleAds } from "@/pages/GoogleAds";
+import { Website } from "@/pages/Website";
+import { CredisoCare } from "@/pages/CredisoCare";
+import { Placeholder } from "@/pages/Placeholder";
+import { flattenRoutes } from "@/lib/site";
+
+/** Routes that already have a real, designed page. Everything else in the IA
+ *  falls back to a blank <Placeholder> until its sections are built. */
+const BUILT_PAGES: Record<string, ReactElement> = {
+  "/website": <Website />,
+  "/google-ads": <GoogleAds />,
+  "/crediso-care": <CredisoCare />,
+};
 
 function App() {
   return (
-    <div className="min-h-screen bg-paper">
-      <Navbar />
-      <main>
-        {/* Order mirrors the Figma frame's vertical (Y) layout, top to bottom */}
-        <Hero />
-        <About />
-        <Services />
-        <CtaBanner />
-        <Projects />
-        <Offers />
-        <Sustainability />
-        <Newsletter />
-        <Certifications />
-        <SocialProof />
-        <Ticker />
-        <Blog />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          {flattenRoutes().map(({ path, label }) => (
+            <Route
+              key={path}
+              path={path}
+              element={BUILT_PAGES[path] ?? <Placeholder title={label} />}
+            />
+          ))}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
