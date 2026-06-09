@@ -46,15 +46,18 @@ export function CcTestimonials() {
         {QUOTES.map((item) => (
           <figure
             key={item.author}
-            className={cn("flex flex-col justify-between rounded-card p-8 md:p-10", item.surface)}
+            className={cn("flex flex-col rounded-card p-8 md:p-10", item.surface)}
           >
-            <span aria-hidden="true" className="font-display text-6xl leading-none text-teal-deep">
+            <span
+              aria-hidden="true"
+              className="font-display text-5xl leading-none text-teal-deep"
+            >
               „
             </span>
-            <blockquote className="-mt-4 font-body text-lg leading-relaxed text-ink-soft">
+            <blockquote className="mt-3 font-body text-lg leading-relaxed text-ink-soft">
               {item.quote}
             </blockquote>
-            <figcaption className="mt-8 font-display text-lg font-semibold text-ink">
+            <figcaption className="mt-auto pt-8 font-display text-lg font-semibold text-ink">
               {item.author}
             </figcaption>
           </figure>

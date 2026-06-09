@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 import { Mail, Phone, MapPin } from "./CcIcons";
 
 const DETAILS = [
@@ -10,39 +11,48 @@ const DETAILS = [
 export function CcKontakt() {
   return (
     <section id="contact" className="section-shell section-y">
-      <div className="relative overflow-hidden rounded-card bg-mint px-6 py-16 text-center md:px-12 md:py-20">
-        {/* rotating seal accent overlapping a corner */}
-        <img
-          src="/assets/images/hero-circle.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute -right-6 -top-6 h-24 w-24 animate-[spin_26s_linear_infinite] md:-right-8 md:-top-8 md:h-36 md:w-36"
-        />
-
-        <h2 className="mx-auto max-w-3xl h-display text-ink">Deine Website in guten Händen.</h2>
-        <p className="mx-auto mt-6 max-w-xl font-body text-lg leading-relaxed text-graphite">
+      <div className="rounded-card bg-teal-deep px-6 py-16 text-center text-paper md:px-12 md:py-24">
+        <span className="font-display text-base font-medium uppercase tracking-wide text-paper/70">
+          Kontakt
+        </span>
+        <h2 className="mx-auto mt-5 max-w-3xl h-display text-paper">
+          Deine Website in guten Händen.
+        </h2>
+        <p className="mx-auto mt-6 max-w-xl font-body text-lg leading-relaxed text-paper/90">
           Melde dich für ein kostenloses Erstgespräch. Wir schauen uns gemeinsam an, was du brauchst
-          und welches Paket für dich am besten passt.
+          und welches Paket am besten zu dir passt – unverbindlich und kostenlos.
         </p>
-        <div className="mt-9 flex justify-center">
-          <Button href="mailto:hallo@crediso.io">Jetzt Erstgespräch vereinbaren</Button>
+
+        <div className="mt-10 flex justify-center">
+          <Button href="mailto:hallo@crediso.io" variant="light" size="lg">
+            Jetzt Erstgespräch vereinbaren
+          </Button>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-x-10 gap-y-4 border-t border-ink/15 pt-10 sm:flex-row sm:flex-wrap">
+        {/* Quick contact — interactive pills */}
+        <div className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-3 border-t border-paper/20 pt-10">
           {DETAILS.map((detail) => {
             const Icon = detail.icon;
+            const classes =
+              "inline-flex items-center gap-2.5 rounded-pill border border-paper/30 px-5 py-3 font-display text-base font-medium text-paper";
             const content = (
-              <span className="inline-flex items-center gap-2.5 font-display text-base font-medium text-ink-soft">
-                <Icon className="h-5 w-5 text-teal-deep" />
+              <>
+                <Icon className="h-5 w-5 shrink-0 text-paper" />
                 {detail.label}
-              </span>
+              </>
             );
             return detail.href ? (
-              <a key={detail.label} href={detail.href} className="hover:text-teal-deep">
+              <a
+                key={detail.label}
+                href={detail.href}
+                className={cn(classes, "transition-colors hover:bg-paper hover:text-teal-deep")}
+              >
                 {content}
               </a>
             ) : (
-              <span key={detail.label}>{content}</span>
+              <span key={detail.label} className={classes}>
+                {content}
+              </span>
             );
           })}
         </div>

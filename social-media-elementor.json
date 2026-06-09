@@ -1,0 +1,1883 @@
+{
+  "version": "0.4",
+  "title": "Crediso – Social Media",
+  "type": "page",
+  "page_settings": {
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+  },
+  "content": [
+    {
+      "id": "a1b2c3d0",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "align_items": "center",
+        "padding": { "unit": "px", "top": "40", "right": "24", "bottom": "64", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "24", "right": "16", "bottom": "40", "left": "16", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "id": "a1b2c3d1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": { "unit": "px", "size": 1280 },
+            "flex_direction": "column",
+            "gap": { "unit": "px", "size": 32 }
+          },
+          "elements": [
+            {
+              "id": "a1b2c3d2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "align_items": "flex-end",
+                "justify_content": "space-between",
+                "gap": { "unit": "px", "size": 48 },
+                "flex_direction_mobile": "column"
+              },
+              "elements": [
+                {
+                  "id": "a1b2c3d3",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 12 },
+                    "width": { "unit": "%", "size": 58 },
+                    "width_mobile": { "unit": "%", "size": 100 }
+                  },
+                  "elements": [
+                    {
+                      "id": "a1b2c3d4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Social Media Agentur Graz",
+                        "header_size": "h6",
+                        "align": "left",
+                        "title_color": "#161616",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "typography_font_weight": "600",
+                        "typography_text_transform": "uppercase",
+                        "typography_letter_spacing": { "unit": "px", "size": 2 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a1b2c3d5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Social Media, das wirklich funktioniert.",
+                        "header_size": "h1",
+                        "align": "left",
+                        "title_color": "#000000",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 56 },
+                        "typography_font_size_tablet": { "unit": "px", "size": 42 },
+                        "typography_font_size_mobile": { "unit": "px", "size": 30 },
+                        "typography_font_weight": "700",
+                        "typography_line_height": { "unit": "em", "size": 1.05 }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "a1b2c3d6",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 24 },
+                    "width": { "unit": "%", "size": 36 },
+                    "width_mobile": { "unit": "%", "size": 100 }
+                  },
+                  "elements": [
+                    {
+                      "id": "a1b2c3d7",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Ob ihr Social Media komplett auslagern, euer Team schulen oder einfach besseren Content produzieren wollt – bei Crediso findet ihr die passende Lösung.</p>",
+                        "align": "left",
+                        "text_color": "#333333",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Nunito Sans",
+                        "typography_font_size": { "unit": "px", "size": 18 },
+                        "typography_line_height": { "unit": "em", "size": 1.6 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a1b2c3d8",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "Kostenlos beraten lassen",
+                        "link": { "url": "#contact", "is_external": false },
+                        "size": "md",
+                        "align": "left",
+                        "background_color": "#000000",
+                        "button_text_color": "#FFFFFF",
+                        "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_weight": "600",
+                        "padding": { "unit": "px", "top": "16", "right": "32", "bottom": "16", "left": "32", "isLinked": false }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "a1b2c3e0",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "align_items": "stretch",
+                "gap": { "unit": "px", "size": 16 },
+                "flex_direction_mobile": "column"
+              },
+              "elements": [
+                {
+                  "id": "a1b2c3e1",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "justify_content": "flex-end",
+                    "gap": { "unit": "px", "size": 12 },
+                    "width": { "unit": "%", "size": 55 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "min_height": { "unit": "px", "size": 460 },
+                    "min_height_mobile": { "unit": "px", "size": 360 },
+                    "padding": { "unit": "px", "top": "36", "right": "36", "bottom": "36", "left": "36", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_image": { "url": "https://via.placeholder.com/900x600/161616/FFFFFF?text=Crediso+Team", "id": "" },
+                    "background_position": "center center",
+                    "background_size": "cover",
+                    "background_overlay_background": "classic",
+                    "background_overlay_color": "#000000",
+                    "background_overlay_opacity": { "unit": "px", "size": 0.55 },
+                    "link": { "url": "/social-media/betreuung", "is_external": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "a1b2c3e2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Komplett-Betreuung",
+                        "header_size": "h2",
+                        "align": "left",
+                        "title_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 30 },
+                        "typography_font_weight": "600",
+                        "typography_line_height": { "unit": "em", "size": 1.1 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a1b2c3e3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Wir übernehmen Strategie, Content und Community – ihr müsst nur freigeben.</p>",
+                        "align": "left",
+                        "text_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Nunito Sans",
+                        "typography_font_size": { "unit": "px", "size": 16 },
+                        "typography_line_height": { "unit": "em", "size": 1.6 }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "a1b2c3e4",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "justify_content": "space-between",
+                    "gap": { "unit": "px", "size": 24 },
+                    "width": { "unit": "%", "size": 21 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "min_height": { "unit": "px", "size": 460 },
+                    "min_height_mobile": { "unit": "px", "size": 300 },
+                    "padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#000000",
+                    "link": { "url": "/social-media/workshops", "is_external": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "a1b2c3e5",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Workshops",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 24 },
+                        "typography_font_weight": "600"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a1b2c3e6",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "gap": { "unit": "px", "size": 20 }
+                      },
+                      "elements": [
+                        {
+                          "id": "a1b2c3e7",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "50%",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#D4C7FA",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 36 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3e8",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>über KMU.Digital förderbar</p>",
+                            "align": "left",
+                            "text_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3e9",
+                          "elType": "widget",
+                          "widgetType": "divider",
+                          "isInner": false,
+                          "settings": {
+                            "style": "solid",
+                            "color": "rgba(255,255,255,0.15)",
+                            "weight": { "unit": "px", "size": 1 },
+                            "width": { "unit": "%", "size": 100 },
+                            "gap": { "unit": "px", "size": 4 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3ea",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "100%",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#D4C7FA",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 36 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3eb",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>praxisnah &amp; individuell</p>",
+                            "align": "left",
+                            "text_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "a1b2c3ec",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "justify_content": "space-between",
+                    "gap": { "unit": "px", "size": 24 },
+                    "width": { "unit": "%", "size": 21 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "min_height": { "unit": "px", "size": 460 },
+                    "min_height_mobile": { "unit": "px", "size": 300 },
+                    "padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#D4C7FA",
+                    "link": { "url": "/social-media/content-production", "is_external": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "a1b2c3ed",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Content",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#000000",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 24 },
+                        "typography_font_weight": "600"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a1b2c3ee",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "gap": { "unit": "px", "size": 20 }
+                      },
+                      "elements": [
+                        {
+                          "id": "a1b2c3ef",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "1 Mio.+",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 36 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3f0",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>Impressionen generiert</p>",
+                            "align": "left",
+                            "text_color": "#161616",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3f1",
+                          "elType": "widget",
+                          "widgetType": "divider",
+                          "isInner": false,
+                          "settings": {
+                            "style": "solid",
+                            "color": "rgba(0,0,0,0.1)",
+                            "weight": { "unit": "px", "size": 1 },
+                            "width": { "unit": "%", "size": 100 },
+                            "gap": { "unit": "px", "size": 4 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3f2",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "100+",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 36 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a1b2c3f3",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>Reels, Fotos &amp; Ads</p>",
+                            "align": "left",
+                            "text_color": "#161616",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2000000",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_wrap": "wrap",
+        "align_items": "center",
+        "justify_content": "center",
+        "gap": { "unit": "px", "size": 32 },
+        "padding": { "unit": "px", "top": "22", "right": "24", "bottom": "22", "left": "24", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#D4C7FA"
+      },
+      "elements": [
+        {
+          "id": "b2000001",
+          "elType": "widget",
+          "widgetType": "icon-list",
+          "isInner": false,
+          "settings": {
+            "view": "inline",
+            "icon_list": [
+              { "_id": "b2000a01", "text": "Über 300 Unternehmen erfolgreich betreut", "selected_icon": { "library": "fa-solid", "value": "fas fa-check" }, "link": { "url": "" } },
+              { "_id": "b2000a02", "text": "Über 7 Jahre Erfahrung im Social Media Management", "selected_icon": { "library": "fa-solid", "value": "fas fa-check" }, "link": { "url": "" } },
+              { "_id": "b2000a03", "text": "Millionenfach Impressionen für unsere Kunden generiert", "selected_icon": { "library": "fa-solid", "value": "fas fa-check" }, "link": { "url": "" } },
+              { "_id": "b2000a04", "text": "Hunderte Beiträge, Reels und Ads für lokale und internationale Marken", "selected_icon": { "library": "fa-solid", "value": "fas fa-check" }, "link": { "url": "" } },
+              { "_id": "b2000a05", "text": "Von Graz bis Zürich: Kunden aus dem gesamten DACH-Raum", "selected_icon": { "library": "fa-solid", "value": "fas fa-check" }, "link": { "url": "" } }
+            ],
+            "space_between": { "unit": "px", "size": 28 },
+            "icon_color": "#000000",
+            "text_color": "#161616",
+            "icon_typography_typography": "custom",
+            "text_typography_typography": "custom",
+            "text_typography_font_family": "Poppins",
+            "text_typography_font_size": { "unit": "px", "size": 16 },
+            "text_typography_font_weight": "600"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "c3000000",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "align_items": "center",
+        "padding": { "unit": "px", "top": "80", "right": "24", "bottom": "80", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "48", "right": "16", "bottom": "48", "left": "16", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "id": "c3000001",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": { "unit": "px", "size": 1280 },
+            "flex_direction": "column",
+            "gap": { "unit": "px", "size": 48 }
+          },
+          "elements": [
+            {
+              "id": "c3000002",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "gap": { "unit": "px", "size": 16 },
+                "width": { "unit": "%", "size": 70 },
+                "width_mobile": { "unit": "%", "size": 100 }
+              },
+              "elements": [
+                {
+                  "id": "c3000003",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Leistungsübersicht",
+                    "header_size": "h6",
+                    "align": "left",
+                    "title_color": "#161616",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_size": { "unit": "px", "size": 16 },
+                    "typography_font_weight": "500",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": { "unit": "px", "size": 1 }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c3000004",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Findet die passende Lösung",
+                    "header_size": "h2",
+                    "align": "left",
+                    "title_color": "#000000",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_size": { "unit": "px", "size": 44 },
+                    "typography_font_size_mobile": { "unit": "px", "size": 28 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.1 }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c3000005",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>Social Media ist nicht für jedes Unternehmen gleich. Manche brauchen jemanden, der alles übernimmt. Andere wollen ihr Team fit machen. Und wieder andere brauchen einfach professionellen Content. Schaut, was für euch passt.</p>",
+                    "align": "left",
+                    "text_color": "#333333",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Nunito Sans",
+                    "typography_font_size": { "unit": "px", "size": 18 },
+                    "typography_line_height": { "unit": "em", "size": 1.6 }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "c3000010",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "align_items": "stretch",
+                "gap": { "unit": "px", "size": 16 }
+              },
+              "elements": [
+                {
+                  "id": "c3000011",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 16 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#000000"
+                  },
+                  "elements": [
+                    {
+                      "id": "c3000012",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "align_items": "center",
+                        "justify_content": "center",
+                        "gap": { "unit": "px", "size": 8 },
+                        "min_height": { "unit": "px", "size": 180 },
+                        "border_radius": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF"
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000013",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "01",
+                            "header_size": "h6",
+                            "align": "center",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000014",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "isInner": false,
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-mobile-alt" },
+                            "size": { "unit": "px", "size": 48 },
+                            "primary_color": "#000000",
+                            "align": "center"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "c3000015",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "gap": { "unit": "px", "size": 12 },
+                        "padding": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true }
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000016",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Für Unternehmen, die Social Media auslagern wollen",
+                            "header_size": "h6",
+                            "align": "left",
+                            "title_color": "#D4C7FA",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600",
+                            "typography_text_transform": "uppercase",
+                            "typography_letter_spacing": { "unit": "px", "size": 1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000017",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Social Media Betreuung",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 30 },
+                            "typography_font_weight": "600",
+                            "typography_line_height": { "unit": "em", "size": 1.1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000018",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>Ihr habt weder Zeit noch Kapazität, euch selbst um Social Media zu kümmern? Wir übernehmen alles: von der Strategie über den Content bis zum Community Management. Ihr müsst nur freigeben.</p>",
+                            "align": "left",
+                            "text_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito Sans",
+                            "typography_font_size": { "unit": "px", "size": 16 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000019",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "text": "Mehr zur Betreuung",
+                            "link": { "url": "/social-media/betreuung", "is_external": false },
+                            "size": "sm",
+                            "align": "left",
+                            "background_color": "rgba(0,0,0,0)",
+                            "button_text_color": "#FFFFFF",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                            "border_color": "#FFFFFF",
+                            "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_weight": "600",
+                            "padding": { "unit": "px", "top": "12", "right": "24", "bottom": "12", "left": "24", "isLinked": false }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "c3000021",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 16 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#D4C7FA"
+                  },
+                  "elements": [
+                    {
+                      "id": "c3000022",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "align_items": "center",
+                        "justify_content": "center",
+                        "gap": { "unit": "px", "size": 8 },
+                        "min_height": { "unit": "px", "size": 180 },
+                        "border_radius": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF"
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000023",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "02",
+                            "header_size": "h6",
+                            "align": "center",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000024",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "isInner": false,
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-chart-line" },
+                            "size": { "unit": "px", "size": 48 },
+                            "primary_color": "#000000",
+                            "align": "center"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "c3000025",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "gap": { "unit": "px", "size": 12 },
+                        "padding": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true }
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000026",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Für alle, die Social Media selbst in die Hand nehmen wollen",
+                            "header_size": "h6",
+                            "align": "left",
+                            "title_color": "#161616",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600",
+                            "typography_text_transform": "uppercase",
+                            "typography_letter_spacing": { "unit": "px", "size": 1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000027",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Social Media Mentoring",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 30 },
+                            "typography_font_weight": "600",
+                            "typography_line_height": { "unit": "em", "size": 1.1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000028",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>Ihr wollt Social Media selbst umsetzen und dabei wirklich vorankommen? Im 1:1 Mentoring begleiten wir euch persönlich: mit ehrlichem Feedback, klarer Strategie und konkreten nächsten Schritten.</p>",
+                            "align": "left",
+                            "text_color": "#161616",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito Sans",
+                            "typography_font_size": { "unit": "px", "size": 16 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000029",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "text": "Mehr zum Mentoring",
+                            "link": { "url": "/social-media/mentoring", "is_external": false },
+                            "size": "sm",
+                            "align": "left",
+                            "background_color": "rgba(0,0,0,0)",
+                            "button_text_color": "#000000",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                            "border_color": "#000000",
+                            "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_weight": "600",
+                            "padding": { "unit": "px", "top": "12", "right": "24", "bottom": "12", "left": "24", "isLinked": false }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "c3000031",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 16 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#000000"
+                  },
+                  "elements": [
+                    {
+                      "id": "c3000032",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "align_items": "center",
+                        "justify_content": "center",
+                        "gap": { "unit": "px", "size": 8 },
+                        "min_height": { "unit": "px", "size": 180 },
+                        "border_radius": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF"
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000033",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "03",
+                            "header_size": "h6",
+                            "align": "center",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000034",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "isInner": false,
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-lightbulb" },
+                            "size": { "unit": "px", "size": 48 },
+                            "primary_color": "#000000",
+                            "align": "center"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "c3000035",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "gap": { "unit": "px", "size": 12 },
+                        "padding": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true }
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000036",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Für Teams, die Social Media lernen wollen",
+                            "header_size": "h6",
+                            "align": "left",
+                            "title_color": "#D4C7FA",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600",
+                            "typography_text_transform": "uppercase",
+                            "typography_letter_spacing": { "unit": "px", "size": 1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000037",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Social Media Workshops",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 30 },
+                            "typography_font_weight": "600",
+                            "typography_line_height": { "unit": "em", "size": 1.1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000038",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>Von Social Media Basics über Content-Produktion bis KI: Unsere Workshops sind praxisorientiert, auf euer Unternehmen zugeschnitten und zu 50 % über KMU.Digital förderbar.</p>",
+                            "align": "left",
+                            "text_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito Sans",
+                            "typography_font_size": { "unit": "px", "size": 16 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000039",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "text": "Mehr zu den Workshops",
+                            "link": { "url": "/social-media/workshops", "is_external": false },
+                            "size": "sm",
+                            "align": "left",
+                            "background_color": "rgba(0,0,0,0)",
+                            "button_text_color": "#FFFFFF",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                            "border_color": "#FFFFFF",
+                            "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_weight": "600",
+                            "padding": { "unit": "px", "top": "12", "right": "24", "bottom": "12", "left": "24", "isLinked": false }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "c3000041",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 16 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#D4C7FA"
+                  },
+                  "elements": [
+                    {
+                      "id": "c3000042",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "align_items": "center",
+                        "justify_content": "center",
+                        "gap": { "unit": "px", "size": 8 },
+                        "min_height": { "unit": "px", "size": 180 },
+                        "border_radius": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF"
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000043",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "04",
+                            "header_size": "h6",
+                            "align": "center",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "700"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000044",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "isInner": false,
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-camera" },
+                            "size": { "unit": "px", "size": 48 },
+                            "primary_color": "#000000",
+                            "align": "center"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "c3000045",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "gap": { "unit": "px", "size": 12 },
+                        "padding": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true }
+                      },
+                      "elements": [
+                        {
+                          "id": "c3000046",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Für alle, die professionelle Fotos & Videos brauchen",
+                            "header_size": "h6",
+                            "align": "left",
+                            "title_color": "#161616",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600",
+                            "typography_text_transform": "uppercase",
+                            "typography_letter_spacing": { "unit": "px", "size": 1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000047",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "title": "Content Produktion",
+                            "header_size": "h3",
+                            "align": "left",
+                            "title_color": "#000000",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_size": { "unit": "px", "size": 30 },
+                            "typography_font_weight": "600",
+                            "typography_line_height": { "unit": "em", "size": 1.1 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000048",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "editor": "<p>Professionelle Fotos und Videos, die auf Social Media und eurer Website wirklich funktionieren. Wir kennen die Plattformen und produzieren Content, der dort performt.</p>",
+                            "align": "left",
+                            "text_color": "#161616",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito Sans",
+                            "typography_font_size": { "unit": "px", "size": 16 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c3000049",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "text": "Mehr zur Content Produktion",
+                            "link": { "url": "/social-media/content-production", "is_external": false },
+                            "size": "sm",
+                            "align": "left",
+                            "background_color": "rgba(0,0,0,0)",
+                            "button_text_color": "#000000",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                            "border_color": "#000000",
+                            "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "typography_typography": "custom",
+                            "typography_font_family": "Poppins",
+                            "typography_font_weight": "600",
+                            "padding": { "unit": "px", "top": "12", "right": "24", "bottom": "12", "left": "24", "isLinked": false }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4000000",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "align_items": "center",
+        "padding": { "unit": "px", "top": "0", "right": "24", "bottom": "80", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "0", "right": "16", "bottom": "48", "left": "16", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "id": "d4000001",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": { "unit": "px", "size": 1280 },
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "align_items": "center",
+            "justify_content": "space-between",
+            "gap": { "unit": "px", "size": 48 },
+            "flex_direction_mobile": "column",
+            "padding": { "unit": "px", "top": "56", "right": "48", "bottom": "56", "left": "48", "isLinked": false },
+            "padding_mobile": { "unit": "px", "top": "40", "right": "24", "bottom": "40", "left": "24", "isLinked": false },
+            "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+            "background_background": "classic",
+            "background_color": "#000000"
+          },
+          "elements": [
+            {
+              "id": "d4000002",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "gap": { "unit": "px", "size": 24 },
+                "width": { "unit": "%", "size": 62 },
+                "width_mobile": { "unit": "%", "size": 100 }
+              },
+              "elements": [
+                {
+                  "id": "d4000003",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Nicht sicher, was das Richtige für euch ist?",
+                    "header_size": "h2",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_size": { "unit": "px", "size": 36 },
+                    "typography_font_size_mobile": { "unit": "px", "size": 26 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.1 }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "d4000004",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>Kein Problem. In einem kurzen, kostenlosen Erstgespräch schauen wir uns gemeinsam an, wo ihr steht und was euch wirklich weiterbringt. Ohne Verkaufsdruck, ohne Verpflichtung.</p>",
+                    "align": "left",
+                    "text_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Nunito Sans",
+                    "typography_font_size": { "unit": "px", "size": 18 },
+                    "typography_line_height": { "unit": "em", "size": 1.6 }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "d4000005",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Jetzt kostenloses Erstgespräch buchen",
+                "link": { "url": "#contact", "is_external": false },
+                "size": "md",
+                "align": "left",
+                "background_color": "#D4C7FA",
+                "button_text_color": "#000000",
+                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_weight": "600",
+                "padding": { "unit": "px", "top": "16", "right": "32", "bottom": "16", "left": "32", "isLinked": false }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e5000000",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "align_items": "center",
+        "padding": { "unit": "px", "top": "80", "right": "24", "bottom": "80", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "48", "right": "16", "bottom": "48", "left": "16", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#FAFAFA"
+      },
+      "elements": [
+        {
+          "id": "e5000001",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": { "unit": "px", "size": 1280 },
+            "flex_direction": "column",
+            "gap": { "unit": "px", "size": 40 }
+          },
+          "elements": [
+            {
+              "id": "e5000002",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "gap": { "unit": "px", "size": 12 }
+              },
+              "elements": [
+                {
+                  "id": "e5000003",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Kundenstimmen",
+                    "header_size": "h6",
+                    "align": "left",
+                    "title_color": "#161616",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_size": { "unit": "px", "size": 16 },
+                    "typography_font_weight": "500",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": { "unit": "px", "size": 1 }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "e5000004",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Das sagen unsere Kund:innen",
+                    "header_size": "h2",
+                    "align": "left",
+                    "title_color": "#000000",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_size": { "unit": "px", "size": 38 },
+                    "typography_font_size_mobile": { "unit": "px", "size": 26 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.1 }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "e5000010",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "align_items": "flex-start",
+                "gap": { "unit": "px", "size": 16 }
+              },
+              "elements": [
+                {
+                  "id": "e5000011",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 20 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#D4C7FA"
+                  },
+                  "elements": [
+                    {
+                      "id": "e5000012",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": { "library": "fa-solid", "value": "fas fa-quote-right" },
+                        "size": { "unit": "px", "size": 32 },
+                        "primary_color": "rgba(0,0,0,0.2)",
+                        "align": "left"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000013",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Crediso schafft es, Kreativität und Strategie perfekt zu verbinden. Konzepte sehen nicht nur gut aus, sie funktionieren auch. Wer echte kreative Power will, sollte mit Crediso arbeiten.</p>",
+                        "align": "left",
+                        "text_color": "#000000",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 19 },
+                        "typography_font_weight": "500",
+                        "typography_line_height": { "unit": "em", "size": 1.4 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000014",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Genericon Pharma",
+                        "header_size": "h6",
+                        "align": "left",
+                        "title_color": "#161616",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 16 },
+                        "typography_font_weight": "600"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "e5000021",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 20 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(0,0,0,0.1)",
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF"
+                  },
+                  "elements": [
+                    {
+                      "id": "e5000022",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": { "library": "fa-solid", "value": "fas fa-quote-right" },
+                        "size": { "unit": "px", "size": 32 },
+                        "primary_color": "#D4C7FA",
+                        "align": "left"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000023",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Die Zusammenarbeit mit Crediso Media war von Anfang an äußerst professionell und angenehm. Besonders hervorheben möchte ich die kompetente Beratung und die lösungsorientierte Herangehensweise. So stellt man sich eine erfolgreiche Partnerschaft vor.</p>",
+                        "align": "left",
+                        "text_color": "#000000",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 19 },
+                        "typography_font_weight": "500",
+                        "typography_line_height": { "unit": "em", "size": 1.4 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000024",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Payam Jamil",
+                        "header_size": "h6",
+                        "align": "left",
+                        "title_color": "#000000",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 16 },
+                        "typography_font_weight": "600"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "e5000031",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 20 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#D4C7FA"
+                  },
+                  "elements": [
+                    {
+                      "id": "e5000032",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": { "library": "fa-solid", "value": "fas fa-quote-right" },
+                        "size": { "unit": "px", "size": 32 },
+                        "primary_color": "rgba(0,0,0,0.2)",
+                        "align": "left"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000033",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Wir arbeiten bereits seit einiger Zeit in verschiedenen Bereichen mit Crediso zusammen und sind rundum zufrieden! Egal ob großes oder kleines Projekt: Alles wurde stets mit viel Sorgfalt und absoluter Zuverlässigkeit umgesetzt.</p>",
+                        "align": "left",
+                        "text_color": "#000000",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 19 },
+                        "typography_font_weight": "500",
+                        "typography_line_height": { "unit": "em", "size": 1.4 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000034",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "UMJ Digital",
+                        "header_size": "h6",
+                        "align": "left",
+                        "title_color": "#161616",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 16 },
+                        "typography_font_weight": "600"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "e5000041",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "gap": { "unit": "px", "size": 20 },
+                    "width": { "unit": "%", "size": 49 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "padding": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true },
+                    "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#000000"
+                  },
+                  "elements": [
+                    {
+                      "id": "e5000042",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "isInner": false,
+                      "settings": {
+                        "selected_icon": { "library": "fa-solid", "value": "fas fa-quote-right" },
+                        "size": { "unit": "px", "size": 32 },
+                        "primary_color": "rgba(212,199,250,0.3)",
+                        "align": "left"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000043",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Nachdem wir mehrere städtische Werbeagenturen ausprobiert haben, sind wir als Firma froh darüber, endlich einen Langzeitpartner in Crediso gefunden zu haben.</p>",
+                        "align": "left",
+                        "text_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 19 },
+                        "typography_font_weight": "500",
+                        "typography_line_height": { "unit": "em", "size": 1.4 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e5000044",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Barbara Hörmann",
+                        "header_size": "h6",
+                        "align": "left",
+                        "title_color": "#D4C7FA",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Poppins",
+                        "typography_font_size": { "unit": "px", "size": 16 },
+                        "typography_font_weight": "600"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f6000000",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "align_items": "center",
+        "padding": { "unit": "px", "top": "80", "right": "24", "bottom": "80", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "48", "right": "16", "bottom": "48", "left": "16", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "id": "f6000001",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": { "unit": "px", "size": 1280 },
+            "flex_direction": "column",
+            "gap": { "unit": "px", "size": 24 },
+            "padding": { "unit": "px", "top": "72", "right": "56", "bottom": "72", "left": "56", "isLinked": false },
+            "padding_mobile": { "unit": "px", "top": "48", "right": "24", "bottom": "48", "left": "24", "isLinked": false },
+            "border_radius": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true },
+            "background_background": "classic",
+            "background_color": "#000000"
+          },
+          "elements": [
+            {
+              "id": "f6000002",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Bereit loszulegen?",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": { "unit": "px", "size": 48 },
+                "typography_font_size_mobile": { "unit": "px", "size": 30 },
+                "typography_font_weight": "700",
+                "typography_line_height": { "unit": "em", "size": 1.05 }
+              },
+              "elements": []
+            },
+            {
+              "id": "f6000003",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Egal ob ihr direkt starten oder erst mal Fragen stellen wollt: Wir sind da.</p>",
+                "align": "left",
+                "text_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Nunito Sans",
+                "typography_font_size": { "unit": "px", "size": 18 },
+                "typography_line_height": { "unit": "em", "size": 1.6 }
+              },
+              "elements": []
+            },
+            {
+              "id": "f6000004",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Jetzt anfragen",
+                "link": { "url": "mailto:hallo@crediso.io", "is_external": false },
+                "size": "md",
+                "align": "left",
+                "background_color": "#D4C7FA",
+                "button_text_color": "#000000",
+                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_weight": "600",
+                "padding": { "unit": "px", "top": "16", "right": "32", "bottom": "16", "left": "32", "isLinked": false }
+              },
+              "elements": []
+            },
+            {
+              "id": "f6000005",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "gap": { "unit": "px", "size": 12 },
+                "margin": { "unit": "px", "top": "16", "right": "0", "bottom": "0", "left": "0", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "f6000006",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "hallo@crediso.io",
+                    "selected_icon": { "library": "fa-solid", "value": "fas fa-envelope" },
+                    "icon_align": "left",
+                    "link": { "url": "mailto:hallo@crediso.io", "is_external": false },
+                    "size": "sm",
+                    "align": "left",
+                    "background_color": "rgba(0,0,0,0)",
+                    "button_text_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255,255,255,0.3)",
+                    "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_weight": "500",
+                    "padding": { "unit": "px", "top": "12", "right": "20", "bottom": "12", "left": "20", "isLinked": false }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "f6000007",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "+43 664 136 47 86",
+                    "selected_icon": { "library": "fa-solid", "value": "fas fa-phone" },
+                    "icon_align": "left",
+                    "link": { "url": "tel:+436641364786", "is_external": false },
+                    "size": "sm",
+                    "align": "left",
+                    "background_color": "rgba(0,0,0,0)",
+                    "button_text_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255,255,255,0.3)",
+                    "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_weight": "500",
+                    "padding": { "unit": "px", "top": "12", "right": "20", "bottom": "12", "left": "20", "isLinked": false }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

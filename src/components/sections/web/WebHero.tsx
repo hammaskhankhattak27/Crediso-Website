@@ -12,8 +12,6 @@ interface WebHeroCta {
 }
 
 interface WebHeroProps {
-  /** Small pill kicker above the headline, e.g. "WEB · CREDISO CARE". */
-  eyebrow: string;
   /** Headline — pass line breaks with <br />. Stays pure black per the design system. */
   title: ReactNode;
   /** Optional tagline shown large under the headline (visual subhead). */
@@ -53,7 +51,6 @@ function CheckMini(props: SVGProps<SVGSVGElement>) {
  * hero language (copy left, image right with rotating seal + accent square).
  */
 export function WebHero({
-  eyebrow,
   title,
   subtitle,
   lead,
@@ -68,11 +65,7 @@ export function WebHero({
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,560px)_minmax(0,1fr)] lg:gap-12">
         {/* Left — copy */}
         <div>
-          <span className="inline-block rounded-pill bg-mint px-5 py-2 font-display text-sm font-semibold uppercase tracking-wide text-ink-090">
-            {eyebrow}
-          </span>
-
-          <h1 className="mt-6 h-display text-ink">{title}</h1>
+          <h1 className="h-display text-ink">{title}</h1>
 
           {subtitle && (
             <p className="mt-5 font-display text-[1.5rem] font-medium leading-snug tracking-tight text-teal-deep md:text-[1.875rem]">
@@ -105,17 +98,17 @@ export function WebHero({
           ) : (
             stats &&
             stats.length > 0 && (
-              <div className="mt-12 flex flex-wrap items-stretch gap-x-8 gap-y-6">
+              <div className="mt-12 flex flex-wrap items-stretch gap-x-5 gap-y-6">
                 {stats.map((stat, i) => (
-                  <div key={stat.label} className="flex items-stretch gap-x-8">
+                  <div key={stat.label} className="flex items-stretch gap-x-5">
                     {i > 0 && (
-                      <span aria-hidden="true" className="w-px self-stretch bg-[#92A3A0]" />
+                      <span aria-hidden="true" className="w-px self-stretch bg-ink-soft/20" />
                     )}
                     <div>
-                      <span className="block font-display text-[2.625rem] font-bold leading-none text-teal-deep">
+                      <span className="block whitespace-nowrap font-display text-[2rem] font-bold leading-none text-teal-deep md:text-[2.25rem]">
                         {stat.value}
                       </span>
-                      <span className="mt-2 block font-display text-lg font-semibold text-ink-soft">
+                      <span className="mt-2 block max-w-[135px] font-display text-[13px] font-semibold leading-tight text-ink-soft md:text-sm">
                         {stat.label}
                       </span>
                     </div>

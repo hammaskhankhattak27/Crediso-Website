@@ -14,9 +14,10 @@ Every routed page, section, and reusable primitive in the app, with its file and
 | Google Ads | [GoogleAds.tsx](../src/pages/GoogleAds.tsx) | `/google-ads` | GaHero → GaBenefits → GaWarum → GaVersprechen → GaPartner → GaPricing → GaFormats → GaMaximiere → GaSuccessstory → **Testimonials** → GaFaq → GaLassUnsStarten → **Contact** |
 | Website | [Website.tsx](../src/pages/Website.tsx) | `/website` | WsHero → WsVerkaufen → WsFahrplan → WsWert → WsWartung → WsWeCare → WsCheck → WsFoerderung → WsBereit → **Contact** |
 | Crediso Care | [CredisoCare.tsx](../src/pages/CredisoCare.tsx) | `/crediso-care` | **WebHero** → CcProblem → CcWasIst → CcLeistungen → CcPreise → CcFuerWen → CcTestimonials → CcFaq → CcKontakt |
+| Social Media | [SocialMedia.tsx](../src/pages/SocialMedia.tsx) | `/social-media` | SmHeroBento → SmTrust → SmLeistungen → SmNichtSicher → SmTestimonials → SmKontakt |
 | Placeholder | [Placeholder.tsx](../src/pages/Placeholder.tsx) | (all undesigned IA paths) | Blank stub — H1 = page title + "im Aufbau" copy. Used until a page's real sections are built. |
 
-**Bold** = shared section reused verbatim. All other IA routes (`/social-media`, `/video`, `/foto`, `/blog`, `/kontakt`, …) currently render `Placeholder`.
+**Bold** = shared section reused verbatim. All other IA routes (`/video`, `/foto`, `/blog`, `/kontakt`, …) currently render `Placeholder`.
 
 ## Shared chrome & utilities — [src/components/](../src/components/)
 
@@ -91,7 +92,7 @@ Shared by every page in the "Web" service category — pass content via props, n
 
 | Section | File | Role |
 |---|---|---|
-| WebHero | [WebHero.tsx](../src/components/sections/web/WebHero.tsx) | Parameterized category hero (eyebrow pill, headline, optional large `subtitle`, lead, two CTAs, and either checkmark `badges` or up to 3 `stats`; image with rotating seal + accent square). Used by Crediso Care; intended for the other Web sub-pages too. |
+| WebHero | [WebHero.tsx](../src/components/sections/web/WebHero.tsx) | Parameterized category hero (headline, optional large `subtitle`, lead, two CTAs, and either checkmark `badges` or up to 3 `stats`; image with rotating seal + accent square). No kicker/pill above the H1 — matches the Ga/Ws heroes. Used by Crediso Care; intended for the other Web sub-pages too. |
 
 ## Crediso Care sections — [src/components/sections/crediso-care/](../src/components/sections/crediso-care/)
 
@@ -106,8 +107,24 @@ Built from the approved Crediso Care copy (problem → what-it-is → what's inc
 | CcFuerWen | [CcFuerWen.tsx](../src/components/sections/crediso-care/CcFuerWen.tsx) | "Für wen ist Crediso Care?" — sticky heading + 5-item checklist (paper-cool). |
 | CcTestimonials | [CcTestimonials.tsx](../src/components/sections/crediso-care/CcTestimonials.tsx) | Four real client quotes as a 2×2 quote-card grid (mint / paper / lavender / paper). |
 | CcFaq | [CcFaq.tsx](../src/components/sections/crediso-care/CcFaq.tsx) | FAQ accordion (same recipe as GaFaq, 6 Care questions; item 5 links to `/seo`). `id="faq"`. |
-| CcKontakt | [CcKontakt.tsx](../src/components/sections/crediso-care/CcKontakt.tsx) | "Deine Website in guten Händen" closing CTA band (mint, rotating seal) + e-mail/phone/address row. `id="contact"` — target of every `#contact` CTA. |
+| CcKontakt | [CcKontakt.tsx](../src/components/sections/crediso-care/CcKontakt.tsx) | "Deine Website in guten Händen" closing band — dark `teal-deep` card, white CTA, and interactive e-mail/phone/address pills. `id="contact"` — target of every `#contact` CTA. |
 | CcIcons | [CcIcons.tsx](../src/components/sections/crediso-care/CcIcons.tsx) | Page icon set: `Shield`, `CloudBackup`, `Gauge`, `Pen`, `Pulse`, `Headset`, `Search`, `Clock`, `Check`, `Plus`, `Mail`, `Phone`, `MapPin`. |
+
+## Social Media sections — [src/components/sections/social-media/](../src/components/sections/social-media/)
+
+The Social Media category overview — implements the client's approved copy (Mai 2026). `SmHero` is the parameterized category hero (intended for the four sub-pages too); the rest are overview-only `Sm*` bands.
+
+| Section | File | Role |
+|---|---|---|
+| SmHeroBento | [SmHeroBento.tsx](../src/components/sections/social-media/SmHeroBento.tsx) | **Overview hero** (`/social-media` only) — a bento: a top text band (eyebrow + headline left, lead + dark CTA right) over a 60/20/20 card row. One large featured image card (Betreuung, 60%) with the copy at the bottom + arrow, and two narrow colour-block **stat cards** (Workshops `teal-deep` / Content `lavender`, two figures each). The three cards mirror the client's intro (auslagern / lernen / Content) and link to the sub-pages. `id="hero"`. |
+| SmHero | [SmHero.tsx](../src/components/sections/social-media/SmHero.tsx) | Reusable **sub-page** category hero (headline, optional `subtitle`, lead, two CTAs, image). The whole hero is **one rounded image box**: a full-bleed photo fills the `rounded-card`, a bottom/left-weighted legibility gradient darkens the copy zone, and the white headline + lead + light/outline-light CTAs sit inside it at the lower-left. Intended for the four Social Media sub-pages (the overview uses `SmHeroBento`). |
+| SmTrust | [SmTrust.tsx](../src/components/sections/social-media/SmTrust.tsx) | Full-bleed **trust band** right below the hero — the client's five trust badges as a continuous mint `animate-marquee` (homepage-Ticker style). Moving strip is `aria-hidden`; an `sr-only` list carries the badges. |
+| SmLeistungen | [SmLeistungen.tsx](../src/components/sections/social-media/SmLeistungen.tsx) | The client's 4-tile **Leistungsübersicht** as a colour-blocked 2×2 bento (Betreuung `teal-deep` / Mentoring `mint` / Workshops `lavender` / Content `ink`). Each card leads with a white "screen" panel holding a custom abstract illustration (see `SmLeistungenArt`) + a number badge, then audience tag, title, copy and a sub-page link. No icons, no photos. `id="leistungen"`. |
+| SmLeistungenArt | [SmLeistungenArt.tsx](../src/components/sections/social-media/SmLeistungenArt.tsx) | The four human-free, flat-geometric SVG illustrations for the cards (`ArtBetreuung` managed feed · `ArtMentoring` growth path · `ArtWorkshops` idea lightbulb · `ArtContent` camera lens), drawn only from tokens via `fill-`/`stroke-` utilities. |
+| SmNichtSicher | [SmNichtSicher.tsx](../src/components/sections/social-media/SmNichtSicher.tsx) | "Nicht sicher, was passt?" low-pressure consultation band — a dark `teal-deep` panel with copy + a light CTA to `#contact`. |
+| SmTestimonials | [SmTestimonials.tsx](../src/components/sections/social-media/SmTestimonials.tsx) | The client's four customer quotes as a **masonry quote wall** (CSS columns, varied heights, alternating mint / paper / lavender / teal-deep) with a quote mark + stars. `id="testimonials"`. |
+| SmKontakt | [SmKontakt.tsx](../src/components/sections/social-media/SmKontakt.tsx) | Closing **"Bereit loszulegen?"** contact band — the target of every `#contact` CTA. Dark `teal-deep` panel, light primary CTA, interactive e-mail/phone pills, rotating-seal accent. `id="contact"`. |
+| SmIcons | [SmIcons.tsx](../src/components/sections/social-media/SmIcons.tsx) | Page icon set: `Compass`, `Care`, `Presentation`, `Camera`, `Spark`, `Check`, `Mail`, `Phone`, `Quote`. |
 
 ## UI primitives — [src/components/ui/](../src/components/ui/)
 

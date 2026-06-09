@@ -6,6 +6,7 @@ import { Home } from "@/pages/Home";
 import { GoogleAds } from "@/pages/GoogleAds";
 import { Website } from "@/pages/Website";
 import { CredisoCare } from "@/pages/CredisoCare";
+import { SocialMedia } from "@/pages/SocialMedia";
 import { Placeholder } from "@/pages/Placeholder";
 import { flattenRoutes } from "@/lib/site";
 
@@ -15,6 +16,7 @@ const BUILT_PAGES: Record<string, ReactElement> = {
   "/website": <Website />,
   "/google-ads": <GoogleAds />,
   "/crediso-care": <CredisoCare />,
+  "/social-media": <SocialMedia />,
 };
 
 function App() {

@@ -20,6 +20,7 @@ export default {
         paper: "#FFFFFF",
         "paper-warm": "#FFFFFC",
         "paper-cool": "#FAFAFA",
+        smoke: "#F3F3F3", // neutral-grey card surface (alternates with ink in card grids)
         // Brand greens
         mint: "#BFE0CC", // primary light-green accent surface
         "mint-soft": "#C0EDD0",

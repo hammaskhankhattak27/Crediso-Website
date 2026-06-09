@@ -51,6 +51,7 @@ Defined in [tailwind.config.ts](../tailwind.config.ts). Use the token name, neve
 | `paper` | `#FFFFFF` | Default page background, text on dark surfaces |
 | `paper-warm` | `#FFFFFC` | Alternate section background (e.g. Contact) to subtly break the white |
 | `paper-cool` | `#FAFAFA` | Alternate cool-white background |
+| `smoke` | `#F3F3F3` | Neutral-grey card surface (alternates with `ink` in card grids) |
 
 ### Brand greens
 | Token | Hex | Used for |
@@ -281,7 +282,7 @@ Current IA / routes, all wrapped in the shared `Layout`:
 | `/crediso-care` | [pages/CredisoCare.tsx](../src/pages/CredisoCare.tsx) | Crediso Care service landing — built on the shared [web/WebHero](../src/components/sections/web/WebHero.tsx) + its own `Cc*` sections in [crediso-care/](../src/components/sections/crediso-care/) |
 | `/seo` | Placeholder | blank |
 | `/google-ads` | [pages/GoogleAds.tsx](../src/pages/GoogleAds.tsx) | Google Ads service landing — sections in [google-ads/](../src/components/sections/google-ads/) (`Ga*`) |
-| `/social-media` | Placeholder | own page + sub-pages `/social-media/{mentoring,betreuung,workshops,content-production}` |
+| `/social-media` | [pages/SocialMedia.tsx](../src/pages/SocialMedia.tsx) | Social Media category overview — built on the shared [social-media/SmHero](../src/components/sections/social-media/SmHero.tsx) + its own `Sm*` sections; reuses `Testimonials` + `Contact`. Links out to its sub-pages `/social-media/{mentoring,betreuung,workshops,content-production}` |
 | `/video` | Placeholder | own page + sub-pages `/video/{image-video,employer-branding,eventvideo,social-media-content,produktvideo,musikvideo,hochzeitsvideo}` |
 | `/foto` | Placeholder | own page, no sub-pages |
 | `/ueber-uns` | Placeholder | blank |

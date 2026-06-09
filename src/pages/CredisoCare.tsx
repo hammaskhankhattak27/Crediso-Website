@@ -16,16 +16,15 @@ export function CredisoCare() {
   return (
     <>
       <WebHero
-        eyebrow="Web · Crediso Care"
         title="Crediso Care"
         subtitle="Das Rundum-sorglos-Paket für deine Website."
         lead="Viele Websites veralten still und leise: Inhalte werden nicht aktualisiert, Sicherheitslücken bleiben offen, das Google-Ranking sinkt. Stell dir die Instandhaltung wie das Service beim Auto vor – ohne regelmäßige Pflege bleibt das System irgendwann stehen. Mit Crediso Care passiert dir das nicht. Wir kümmern uns um alles, damit du es nicht musst."
         primaryCta={{ label: "Jetzt Erstgespräch vereinbaren", href: "#contact" }}
         secondaryCta={{ label: "Was ist enthalten?", href: "#enthalten" }}
-        badges={[
-          "Über 300 Unternehmen erfolgreich betreut",
-          "Über 7 Jahre Erfahrung im digitalen Marketing",
-          "Ab €229 pro Monat, zzgl. MwSt.",
+        stats={[
+          { value: "300+", label: "betreute Unternehmen" },
+          { value: "7+", label: "Jahre Erfahrung" },
+          { value: "ab €229", label: "im Monat, zzgl. MwSt." },
         ]}
         image={{
           src: "/assets/images/website/wartung.png",

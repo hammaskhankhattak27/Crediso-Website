@@ -82,38 +82,48 @@ export function CcLeistungen() {
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] lg:gap-8">
-        {/* Selector — horizontal scroller on mobile, vertical list on desktop */}
-        <div
-          role="tablist"
-          aria-label="Was in Crediso Care enthalten ist"
-          className="no-scrollbar -mx-[var(--page-px)] flex gap-3 overflow-x-auto px-[var(--page-px)] pb-1 lg:mx-0 lg:flex-col lg:overflow-visible lg:px-0 lg:pb-0"
-        >
-          {CATEGORIES.map((item, i) => {
-            const Icon = item.icon;
-            const isActive = active === i;
-            return (
-              <button
-                key={item.title}
-                id={`enthalten-tab-${i}`}
-                type="button"
-                role="tab"
-                aria-selected={isActive}
-                aria-controls="enthalten-panel"
-                onClick={() => setActive(i)}
-                className={cn(
-                  "group flex shrink-0 items-center gap-3 rounded-card px-5 py-4 text-left transition-colors duration-200 lg:w-full",
-                  isActive
-                    ? "bg-teal-deep text-paper"
-                    : "border border-ink text-ink-soft hover:bg-mint/40",
-                )}
-              >
-                <Icon className="h-6 w-6 shrink-0" />
-                <span className="whitespace-nowrap font-display text-base font-semibold lg:whitespace-normal lg:text-lg">
-                  {item.title}
-                </span>
-              </button>
-            );
-          })}
+        {/* Selector + reassurance — scroller on mobile, vertical list on desktop */}
+        <div className="flex flex-col gap-4">
+          <div
+            role="tablist"
+            aria-label="Was in Crediso Care enthalten ist"
+            className="no-scrollbar -mx-[var(--page-px)] flex gap-3 overflow-x-auto px-[var(--page-px)] pb-1 lg:mx-0 lg:flex-col lg:overflow-visible lg:px-0 lg:pb-0"
+          >
+            {CATEGORIES.map((item, i) => {
+              const Icon = item.icon;
+              const isActive = active === i;
+              return (
+                <button
+                  key={item.title}
+                  id={`enthalten-tab-${i}`}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls="enthalten-panel"
+                  onClick={() => setActive(i)}
+                  className={cn(
+                    "group flex shrink-0 items-center gap-3 rounded-card px-5 py-4 text-left transition-colors duration-200 lg:w-full",
+                    isActive
+                      ? "bg-teal-deep text-paper"
+                      : "border border-ink text-ink-soft hover:bg-mint/40",
+                  )}
+                >
+                  <Icon className="h-6 w-6 shrink-0" />
+                  <span className="whitespace-nowrap font-display text-base font-semibold lg:whitespace-normal lg:text-lg">
+                    {item.title}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Reassurance — grows to fill the column so it matches the panel height */}
+          <div className="hidden rounded-card border border-ink bg-mint p-6 lg:flex lg:flex-1 lg:items-center">
+            <p className="font-body text-base leading-relaxed text-ink-soft">
+              <span className="font-semibold text-ink">Gut zu wissen:</span> All das steckt in
+              Crediso Care – der genaue Umfang richtet sich nach deinem gewählten Paket.
+            </p>
+          </div>
         </div>
 
         {/* Spotlight panel for the active category */}
