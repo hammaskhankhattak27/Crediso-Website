@@ -1,6 +1,7 @@
+import type { ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
-import { Mail, Phone, MapPin } from "./CcIcons";
+import { Mail, Phone, MapPin } from "@/components/sections/crediso-care/CcIcons";
 
 const DETAILS = [
   { icon: Mail, label: "hallo@crediso.io", href: "mailto:hallo@crediso.io" },
@@ -8,7 +9,20 @@ const DETAILS = [
   { icon: MapPin, label: "Schmiedgasse 29, 8010 Graz", href: undefined },
 ];
 
-export function CcKontakt() {
+interface WebKontaktProps {
+  heading: ReactNode;
+  copy: string;
+  ctaLabel?: string;
+}
+
+/** Shared pre-footer contact card for the "Web" category pages — dark teal
+ *  panel with the rotating seal, a centered CTA and the contact pills. Only
+ *  the heading/copy differ per page (lifted from the former CcKontakt). */
+export function WebKontakt({
+  heading,
+  copy,
+  ctaLabel = "Jetzt Erstgespräch vereinbaren",
+}: WebKontaktProps) {
   return (
     <section id="contact" className="section-shell section-y">
       <div className="relative overflow-hidden rounded-card bg-teal-deep px-6 py-16 text-center text-paper md:px-12 md:py-24">
@@ -25,17 +39,14 @@ export function CcKontakt() {
         />
 
         <div className="relative z-10">
-          <h2 className="mx-auto max-w-3xl h-display text-paper">
-            Deine Website in guten Händen.
-          </h2>
+          <h2 className="mx-auto max-w-3xl h-display text-paper">{heading}</h2>
           <p className="mx-auto mt-6 max-w-xl font-body text-lg leading-relaxed text-paper/90">
-            Melde dich für ein kostenloses Erstgespräch. Wir schauen uns gemeinsam an, was du
-            brauchst und welches Paket am besten zu dir passt – unverbindlich und kostenlos.
+            {copy}
           </p>
 
           <div className="mt-10 flex justify-center">
             <Button href="mailto:hallo@crediso.io" variant="light" size="lg">
-              Jetzt Erstgespräch vereinbaren
+              {ctaLabel}
             </Button>
           </div>
 

@@ -25,7 +25,8 @@ const DEFAULT_FEATURED: Voice = {
   name: "Österreichischer Tierärzteverlag",
 };
 
-const DEFAULT_VOICES: Voice[] = [
+/** Exported so pages with partial own testimonials can fill the row from here. */
+export const DEFAULT_VOICES: Voice[] = [
   {
     quote:
       "Frisch, innovativ, immer am Puls! Die Betreuung von Crediso ist ebenso top wie die Erstellung unserer neuen Homepage.",

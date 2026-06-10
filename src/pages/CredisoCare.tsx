@@ -6,7 +6,7 @@ import { CcPreise } from "@/components/sections/crediso-care/CcPreise";
 import { CcFuerWen } from "@/components/sections/crediso-care/CcFuerWen";
 import { Reviews } from "@/components/sections/Reviews";
 import { CcFaq, FAQS } from "@/components/sections/crediso-care/CcFaq";
-import { CcKontakt } from "@/components/sections/crediso-care/CcKontakt";
+import { WebKontakt } from "@/components/sections/web/WebKontakt";
 
 /** Structured data for the page — FAQPage (built from the same FAQ list the
  *  CcFaq section renders) + LocalBusiness, per the copy brief. */
@@ -72,7 +72,10 @@ export function CredisoCare() {
       <CcFuerWen />
       <Reviews />
       <CcFaq />
-      <CcKontakt />
+      <WebKontakt
+        heading="Deine Website in guten Händen."
+        copy="Melde dich für ein kostenloses Erstgespräch. Wir schauen uns gemeinsam an, was du brauchst und welches Paket am besten zu dir passt – unverbindlich und kostenlos."
+      />
     </>
   );
 }
