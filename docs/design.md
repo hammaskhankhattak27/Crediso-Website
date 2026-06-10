@@ -42,10 +42,10 @@ Defined in [tailwind.config.ts](../tailwind.config.ts). Use the token name, neve
 ### Neutrals
 | Token | Hex | Used for |
 |---|---|---|
-| `ink` | `#000000` | **All headlines** (`text-ink` on display type — headlines are always pure black, full heading, never tinted or partially accented), dark buttons |
-| `ink-soft` | `#161616` | Card titles (`h3`), eyebrow/UI labels, borders, dark display figures |
+| `ink` | `#000000` | **All headlines AND all body copy** — `text-ink` on display type (headlines are always pure black, full heading, never tinted or partially accented) and on running copy (`body` defaults to `text-ink`; the canonical copy style is Avenir LT Std Book, 18px / 27px, pure black). Also dark buttons. |
+| `ink-soft` | `#161616` | Card titles (`h3`), eyebrow/UI labels, borders, dark display figures, **the site-wide footer background** (text inverts to `paper`, accent/hover → `mint`) |
 | `ink-090` | `#090909` | Occasional near-black (pill labels) |
-| `graphite` | `#333333` | **Default copy / paragraph text color** (`body` is `text-graphite`) — the client's canonical copy style: Avenir LT Std Book, 18px / 27px |
+| `graphite` | `#333333` | Legacy copy grey — copy is now pure `ink`; kept as a token only if a deliberately softer-than-black grey is ever needed |
 | `slate` | `#5C5B5B` | Tertiary text (rare) |
 | `mute` | `#767676` | Muted hints, input borders |
 | `paper` | `#FFFFFF` | Default page background, text on dark surfaces |
@@ -56,7 +56,7 @@ Defined in [tailwind.config.ts](../tailwind.config.ts). Use the token name, neve
 ### Brand greens
 | Token | Hex | Used for |
 |---|---|---|
-| `mint` | `#BFE0CC` | **The signature accent.** Primary card surface, pills, ticker bands, footer bg, active filter chips |
+| `mint` | `#BFE0CC` | **The signature accent.** Primary card surface, pills, ticker bands, active filter chips, and the accent/hover color on the dark footer |
 | `mint-soft` | `#C0EDD0` | Slightly brighter mint variant |
 | `sage` | `#D3DED9` | Muted green-grey surface |
 | `teal` | `#5FBDAE` | Mid teal |
@@ -93,7 +93,9 @@ Two brand families, both licensed and bundled in `/public/fonts/`, declared via 
 | `font-body` | Avenir → Nunito Sans → Inter → system | Paragraph / running copy |
 | `font-inter` | Inter → system | Fallback utility family — not used directly (contact-card meta lines are `font-body`/Avenir like all other copy) |
 
-`h1–h4` automatically get `font-display` + `text-ink` (pure black) + `text-wrap: balance` from the base layer — **headlines are always black, the full heading** (never underlined or with only a few words tinted). Body defaults to `font-body text-graphite` (copy text = Avenir LT Std Book, 18px / 27px, `#333333`).
+`h1–h4` automatically get `font-display` + `text-ink` (pure black) + `text-wrap: balance` from the base layer — **headlines are always black, the full heading** (never underlined or with only a few words tinted). Body defaults to `font-body text-ink` (copy text = Avenir LT Std Book, 18px / 27px, pure black `#000`).
+
+**No section kicker / eyebrow.** A section starts with its `<h2>` (or hero `<h1>`) directly — do **not** place a small uppercase label (e.g. `FAQ`, `Preise`, `Kundenstimmen`) above the main heading. This pattern was removed site-wide; don't reintroduce it. Uppercase category tags are still allowed *inside cards* (above a card's own title) and as stat/form/nav labels — just never as the lead-in above a section heading.
 
 ### Display heading classes — use these, don't reinvent
 Defined in `@layer components`:
@@ -109,9 +111,9 @@ Pair them with a color: `<h2 className="h-display text-ink">`.
 | Page/section hero heading | `h-display text-ink` |
 | Secondary heading | `h-display-sm text-ink` |
 | In-card heading (h3) | `font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05]` (large feature) or `text-2xl font-semibold` (small card) |
-| Copy / lead paragraph | `font-body text-lg leading-relaxed text-graphite` (18px / 27px, `#333` — the canonical copy style on any light surface, incl. mint/lavender cards). On dark surfaces use `text-paper` / `text-paper/90`. |
-| Body paragraph | `font-body text-base leading-relaxed text-graphite` |
-| Eyebrow / kicker label | `font-display text-base font-medium uppercase tracking-wide text-ink-soft` |
+| Copy / lead paragraph | `font-body text-lg leading-relaxed text-ink` (18px / 27px, pure black `#000` — the canonical copy style on any light surface, incl. mint/lavender cards). On dark surfaces use `text-paper` / `text-paper/90`. |
+| Body paragraph | `font-body text-base leading-relaxed text-ink` |
+| Category label (card-level only) | `font-display text-base font-medium uppercase tracking-wide text-ink-soft` — **only** as a tag above a *card's* title (Offers, GaVersprechen). **Never** as a kicker above a section's main heading (see rule below). |
 | Pill chip label | `font-display text-sm font-semibold` |
 | Nav link | `font-display text-lg font-medium text-ink-soft hover:text-teal-deep` |
 | Stat number | `font-display text-6xl font-bold leading-none` |
@@ -316,7 +318,7 @@ Both service pages are verified for **zero horizontal overflow at 360 / 390 / 76
 ## 10. Quick checklist before shipping a section/page
 
 - [ ] Wrapped in `.section-shell` + `.section-y` (or the full-bleed-bg variant).
-- [ ] Headings use `.h-display` / `.h-display-sm`; body uses `font-body`.
+- [ ] Headings use `.h-display` / `.h-display-sm`; body uses `font-body`. **No uppercase kicker/eyebrow above a section's main heading** — the section leads with its `<h2>`.
 - [ ] Colors are tokens (`bg-mint`, `text-ink-soft`, `text-teal-deep` on hover) — zero raw hex.
 - [ ] Cards/images use `rounded-card`; CTAs use `<Button>` with the right variant for the surface.
 - [ ] German copy, meaningful `alt`s, decorative media `aria-hidden`.

@@ -19,7 +19,7 @@ export function WsHero() {
             lassen Graz
           </h1>
 
-          <p className="mt-8 max-w-xl font-body text-lg leading-relaxed text-graphite">
+          <p className="mt-8 max-w-xl font-body text-lg leading-relaxed text-ink">
             Die Website ist das wichtigste Marketinginstrument deines Unternehmens. Egal ob
             Weiterempfehlung, Printwerbung oder Social Media, am Ende landen alle bei dir auf der
             Website. Jetzt hat sie eine Aufgabe: überzeugen. Und zum Kontakt bewegen.

@@ -20,7 +20,7 @@ export function GaVersprechen() {
           <h3 className="mt-4 font-display text-[2rem] md:text-[44px] font-semibold leading-[0.95] tracking-display text-ink-soft">
             Echte Expert:innen
           </h3>
-          <p className="mt-5 font-body text-lg leading-[29px] text-graphite">
+          <p className="mt-5 font-body text-lg leading-[29px] text-ink">
             Für Tina &amp; Robert ist das Verwalten von Google Ads pure Leidenschaft. Knapp 10 Jahre
             Erfahrung und das Verwalten von Budgets in Millionenhöhe sprechen für sich. Wie
             erfolgreich deine Kampagne läuft, bekommst du jeden Monat als detaillierten Report mit
@@ -65,7 +65,7 @@ export function GaVersprechen() {
             <h3 className="mt-4 font-display text-[2rem] md:text-[44px] font-semibold leading-[0.95] tracking-display text-ink-soft">
               Persönliche Betreuung
             </h3>
-            <p className="mt-5 max-w-xl font-body text-lg leading-[29px] text-graphite">
+            <p className="mt-5 max-w-xl font-body text-lg leading-[29px] text-ink">
               Du möchtest deine Kampagne besprechen? Wir sind jederzeit für dich da – digital &amp;
               persönlich im Großraum Graz.
             </p>
@@ -86,7 +86,7 @@ export function GaVersprechen() {
                 <br />
                 kurze Laufzeit
               </h3>
-              <p className="mt-6 font-body text-lg leading-[27px] text-graphite">
+              <p className="mt-6 font-body text-lg leading-[27px] text-ink">
                 Du hast alle Kosten stets im Überblick – keine bösen Überraschungen. Du denkst,
                 Google Ads ist doch nicht das Richtige für dich? Kein Problem, wir können jederzeit
                 stoppen. Wir empfehlen mindestens 3 Monate.

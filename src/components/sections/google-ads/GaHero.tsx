@@ -19,7 +19,7 @@ export function GaHero() {
             Agentur aus Graz
           </h1>
 
-          <p className="mt-8 max-w-[586px] font-body text-lg leading-relaxed text-graphite">
+          <p className="mt-8 max-w-[586px] font-body text-lg leading-relaxed text-ink">
             Deine Website ist das wichtigste Marketinginstrument. Egal ob Empfehlung, Werbung oder
             Social Media, am Ende zählt, dass sie überzeugt und zum Kontakt führt.
           </p>

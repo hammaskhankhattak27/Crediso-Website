@@ -10,7 +10,7 @@ export function Hero() {
           <h1 className="h-display text-ink">
             Dein Unternehmen verdient einen Onlineauftritt, der Kunden bringt.
           </h1>
-          <p className="mt-6 max-w-lg font-body text-lg leading-relaxed text-graphite">
+          <p className="mt-6 max-w-lg font-body text-lg leading-relaxed text-ink">
             Crediso macht digitale Kommunikation sichtbar, verständlich und wirksam. Für Unternehmen,
             die mehr erreichen wollen. Bist du bereit durchzustarten?
           </p>

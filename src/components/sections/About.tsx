@@ -13,7 +13,7 @@ export function About() {
         <h2 className="h-display-sm text-ink">
           Hi, wir sind Crediso, deine Digitalagentur aus Graz.
         </h2>
-        <p className="max-w-xl font-body text-lg leading-relaxed text-graphite lg:pt-2">
+        <p className="max-w-xl font-body text-lg leading-relaxed text-ink lg:pt-2">
           Während du dich um dein Business kümmerst, übernehmen wir deinen kompletten Onlineauftritt.
           Websites, Social Media, Google Ads, SEO, Foto & Video aus einer Hand, mit einem persönlichen
           Ansprechpartner der dich und dein Unternehmen wirklich kennt.

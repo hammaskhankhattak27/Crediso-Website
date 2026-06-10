@@ -55,7 +55,7 @@ export function WsFahrplan() {
     <section className="section-shell section-y">
       <div className="text-center">
         <h2 className="h-display text-ink">Dein Fahrplan zum Erfolg</h2>
-        <p className="mx-auto mt-6 max-w-2xl font-body text-lg leading-relaxed text-graphite">
+        <p className="mx-auto mt-6 max-w-2xl font-body text-lg leading-relaxed text-ink">
           Wir nehmen dich Schritt für Schritt mit und sorgen für einen klaren, stressfreien Ablauf.
         </p>
       </div>

@@ -15,7 +15,7 @@ export function GaBenefits() {
           <br />
           setzen solltest?
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl font-body text-lg leading-relaxed text-graphite">
+        <p className="mx-auto mt-6 max-w-2xl font-body text-lg leading-relaxed text-ink">
           Wir haben die volle Kontrolle und bezahlen nur für Ergebnisse – du bestimmst Budget,
           Zielgruppe und Reichweite.
         </p>

@@ -14,7 +14,7 @@ export function GaSuccessstory() {
             {PARAGRAPHS.map((paragraph) => (
               <p
                 key={paragraph.slice(0, 24)}
-                className="font-body text-lg leading-relaxed text-graphite"
+                className="font-body text-lg leading-relaxed text-ink"
               >
                 {paragraph}
               </p>
@@ -31,7 +31,7 @@ export function GaSuccessstory() {
               <div className="flex flex-col">
                 <div className="flex items-center gap-3">
                   <span aria-hidden="true" className="h-[18px] w-[18px] rounded-full bg-mint" />
-                  <span className="font-display text-sm font-semibold uppercase tracking-[0.1em] text-graphite">
+                  <span className="font-display text-sm font-semibold uppercase tracking-[0.1em] text-ink">
                     Monthly Growth
                   </span>
                 </div>

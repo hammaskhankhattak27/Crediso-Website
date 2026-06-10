@@ -10,11 +10,11 @@ Every routed page, section, and reusable primitive in the app, with its file and
 
 | Page | File | Route | Composition |
 |---|---|---|---|
-| Home (Startseite) | [Home.tsx](../src/pages/Home.tsx) | `/` | Hero → About → Services → CtaBanner → Projects → Offers → Sustainability → Newsletter → Certifications → SocialProof → Ticker → Blog → Testimonials → Contact |
-| Google Ads | [GoogleAds.tsx](../src/pages/GoogleAds.tsx) | `/google-ads` | GaHero → GaBenefits → GaWarum → GaVersprechen → GaPartner → GaPricing → GaFormats → GaMaximiere → GaSuccessstory → **Testimonials** → GaFaq → GaLassUnsStarten → **Contact** |
-| Website | [Website.tsx](../src/pages/Website.tsx) | `/website` | WsHero → WsVerkaufen → WsFahrplan → WsWert → WsWartung → WsWeCare → WsCheck → WsFoerderung → WsBereit → **Contact** |
-| Crediso Care | [CredisoCare.tsx](../src/pages/CredisoCare.tsx) | `/crediso-care` | **WebHero** → CcProblem → CcWasIst → CcLeistungen → CcPreise → CcFuerWen → CcTestimonials → CcFaq → CcKontakt |
-| Social Media | [SocialMedia.tsx](../src/pages/SocialMedia.tsx) | `/social-media` | SmHeroBento → SmTrust → SmLeistungen → SmNichtSicher → SmTestimonials → SmKontakt |
+| Home (Startseite) | [Home.tsx](../src/pages/Home.tsx) | `/` | Hero → About → Services → CtaBanner → Projects → Offers → Sustainability → Newsletter → Certifications → SocialProof → Ticker → Blog → **Reviews** → Contact |
+| Google Ads | [GoogleAds.tsx](../src/pages/GoogleAds.tsx) | `/google-ads` | GaHero → GaBenefits → GaWarum → GaVersprechen → GaPartner → GaPricing → GaFormats → GaMaximiere → GaSuccessstory → **Reviews** → GaFaq → GaLassUnsStarten → **Contact** |
+| Website | [Website.tsx](../src/pages/Website.tsx) | `/website` | WsHero → WsVerkaufen → WsFahrplan → WsWert → WsWartung → WsWeCare → WsCheck → WsFoerderung → **Reviews** → WsBereit → **Contact** |
+| Crediso Care | [CredisoCare.tsx](../src/pages/CredisoCare.tsx) | `/crediso-care` | **WebHero** → CcProblem → CcWasIst → CcLeistungen → CcPreise → CcFuerWen → **Reviews** → CcFaq → CcKontakt |
+| Social Media | [SocialMedia.tsx](../src/pages/SocialMedia.tsx) | `/social-media` | SmHeroBento → SmTrust → SmLeistungen → SmNichtSicher → **Reviews** (`accent="lavender"`) → SmKontakt |
 | Placeholder | [Placeholder.tsx](../src/pages/Placeholder.tsx) | (all undesigned IA paths) | Blank stub — H1 = page title + "im Aufbau" copy. Used until a page's real sections are built. |
 
 **Bold** = shared section reused verbatim. All other IA routes (`/video`, `/foto`, `/blog`, `/kontakt`, …) currently render `Placeholder`.
@@ -33,9 +33,9 @@ Reused across multiple pages — never fork these.
 | Section | File | Role |
 |---|---|---|
 | Navbar | [Navbar.tsx](../src/components/sections/Navbar.tsx) | Sticky header; full-width `Leistungen` mega-menu (desktop) + accordion (mobile), data-driven from `SITE_NAV`. |
-| Footer | [Footer.tsx](../src/components/sections/Footer.tsx) | Site footer (mint), social buttons, slogan. |
+| Footer | [Footer.tsx](../src/components/sections/Footer.tsx) | Site footer — dark `ink-soft` (#161616) background, `paper` text, mint accents/hover; social buttons, slogan. |
 | Contact | [Contact.tsx](../src/components/sections/Contact.tsx) | `id="contact"` — contact form + details. The target of every `#contact` CTA. |
-| Testimonials | [Testimonials.tsx](../src/components/sections/Testimonials.tsx) | Horizontal testimonial scroller. Reused on the Google Ads page. |
+| Reviews | [Reviews.tsx](../src/components/sections/Reviews.tsx) | Shared "Kundenstimmen" bento used on **every** page — featured quote (2×2) + team-photo tile + three-up quote row, quote mark + stars, `id="testimonials"`. Brand-green default content; `accent` prop swaps only the featured tile's surface (`mint` everywhere, `lavender` on Social Media). Pass `featured` / `voices` / `photo` / `heading` to override copy. |
 
 ## Home-only sections — [src/components/sections/](../src/components/sections/)
 
@@ -67,7 +67,7 @@ Reused across multiple pages — never fork these.
 | GaFormats | [GaFormats.tsx](../src/components/sections/google-ads/GaFormats.tsx) | Ad-format cards with format-tag checks. |
 | GaMaximiere | [GaMaximiere.tsx](../src/components/sections/google-ads/GaMaximiere.tsx) | "Maximiere …" value section. |
 | GaSuccessstory | [GaSuccessstory.tsx](../src/components/sections/google-ads/GaSuccessstory.tsx) | Success-story / outcome card. |
-| GaFaq | [GaFaq.tsx](../src/components/sections/google-ads/GaFaq.tsx) | FAQ accordion — bordered items, open item fills `bg-mint`, `Plus` icon rotates to ×. `id="faq"`. |
+| GaFaq | [GaFaq.tsx](../src/components/sections/google-ads/GaFaq.tsx) | FAQ — same recipe as `CcFaq`: plain text intro on the left (sticky, no card) + numbered accordion on the right (hairline dividers, no cards; number + question, `Plus` toggle). `id="faq"`. |
 | GaLassUnsStarten | [GaLassUnsStarten.tsx](../src/components/sections/google-ads/GaLassUnsStarten.tsx) | Big "Lass uns starten" CTA (teal-deep, feature list + button). |
 | GaIcons | [GaIcons.tsx](../src/components/sections/google-ads/GaIcons.tsx) | Page icon set: `Check`, `Clock`, `Plus`, `GoogleWordmark`, `Sparkle`. |
 
@@ -101,12 +101,11 @@ Built from the approved Crediso Care copy (problem → what-it-is → what's inc
 | Section | File | Role |
 |---|---|---|
 | CcProblem | [CcProblem.tsx](../src/components/sections/crediso-care/CcProblem.tsx) | "Kennst du das?" — pain copy + punchline beside three sticky-note style cards (mint / lavender / sun). |
-| CcWasIst | [CcWasIst.tsx](../src/components/sections/crediso-care/CcWasIst.tsx) | "Ein Fixpreis…" dark `teal-deep` band: promise + WhatsApp callout + background-monitoring chips. |
-| CcLeistungen | [CcLeistungen.tsx](../src/components/sections/crediso-care/CcLeistungen.tsx) | "Was enthalten ist" interactive icon-grid explorer — selectable list (vertical desktop / horizontal chip scroller mobile, active = `teal-deep`) drives a mint spotlight panel (watermark number, icon, check grid) for each of the 4 categories. `id="enthalten"`. |
+| CcWasIst | [CcWasIst.tsx](../src/components/sections/crediso-care/CcWasIst.tsx) | "Ein Fixpreis…" — light two-column: promise + animated background-monitoring chips (teal ping) on the left, portrait image on the right with the WhatsApp voice-note as a mint chat-bubble card overlapping its corner. |
+| CcLeistungen | [CcLeistungen.tsx](../src/components/sections/crediso-care/CcLeistungen.tsx) | "Was enthalten ist" bento — heading + large total-count stat (`teal-deep`, computed from the data), then the 4 pillars at their real weights: featured dark `teal-deep` checklist (Technische Basis, divider rows) + stacked mint/smoke cards (Inhalte, SEO & GEO) + full-width sage Support band with pill chips and the section CTA. `id="enthalten"`. |
 | CcPreise | [CcPreise.tsx](../src/components/sections/crediso-care/CcPreise.tsx) | "Transparent und planbar" — copy + single "Ab €229,-" price card (no fixed tiers; packages tailored in the Erstgespräch). `id="preise"`. |
 | CcFuerWen | [CcFuerWen.tsx](../src/components/sections/crediso-care/CcFuerWen.tsx) | "Für wen ist Crediso Care?" — sticky heading + 5-item checklist (paper-cool). |
-| CcTestimonials | [CcTestimonials.tsx](../src/components/sections/crediso-care/CcTestimonials.tsx) | Four real client quotes as a 2×2 quote-card grid (mint / paper / lavender / paper). |
-| CcFaq | [CcFaq.tsx](../src/components/sections/crediso-care/CcFaq.tsx) | FAQ accordion (same recipe as GaFaq, 6 Care questions; item 5 links to `/seo`). `id="faq"`. |
+| CcFaq | [CcFaq.tsx](../src/components/sections/crediso-care/CcFaq.tsx) | FAQ — plain text intro on the left (sticky, no card) + numbered accordion on the right (hairline dividers, no cards; number + question, `Plus` toggle, multiple panels open). 6 Care questions; item 5 links to `/seo`. `id="faq"`. |
 | CcKontakt | [CcKontakt.tsx](../src/components/sections/crediso-care/CcKontakt.tsx) | "Deine Website in guten Händen" closing band — dark `teal-deep` card, white CTA, and interactive e-mail/phone/address pills. `id="contact"` — target of every `#contact` CTA. |
 | CcIcons | [CcIcons.tsx](../src/components/sections/crediso-care/CcIcons.tsx) | Page icon set: `Shield`, `CloudBackup`, `Gauge`, `Pen`, `Pulse`, `Headset`, `Search`, `Clock`, `Check`, `Plus`, `Mail`, `Phone`, `MapPin`. |
 
@@ -122,7 +121,6 @@ The Social Media category overview — implements the client's approved copy (Ma
 | SmLeistungen | [SmLeistungen.tsx](../src/components/sections/social-media/SmLeistungen.tsx) | The client's 4-tile **Leistungsübersicht** as a colour-blocked 2×2 bento (Betreuung `teal-deep` / Mentoring `mint` / Workshops `lavender` / Content `ink`). Each card leads with a white "screen" panel holding a custom abstract illustration (see `SmLeistungenArt`) + a number badge, then audience tag, title, copy and a sub-page link. No icons, no photos. `id="leistungen"`. |
 | SmLeistungenArt | [SmLeistungenArt.tsx](../src/components/sections/social-media/SmLeistungenArt.tsx) | The four human-free, flat-geometric SVG illustrations for the cards (`ArtBetreuung` managed feed · `ArtMentoring` growth path · `ArtWorkshops` idea lightbulb · `ArtContent` camera lens), drawn only from tokens via `fill-`/`stroke-` utilities. |
 | SmNichtSicher | [SmNichtSicher.tsx](../src/components/sections/social-media/SmNichtSicher.tsx) | "Nicht sicher, was passt?" low-pressure consultation band — a dark `teal-deep` panel with copy + a light CTA to `#contact`. |
-| SmTestimonials | [SmTestimonials.tsx](../src/components/sections/social-media/SmTestimonials.tsx) | The client's four customer quotes as a **masonry quote wall** (CSS columns, varied heights, alternating mint / paper / lavender / teal-deep) with a quote mark + stars. `id="testimonials"`. |
 | SmKontakt | [SmKontakt.tsx](../src/components/sections/social-media/SmKontakt.tsx) | Closing **"Bereit loszulegen?"** contact band — the target of every `#contact` CTA. Dark `teal-deep` panel, light primary CTA, interactive e-mail/phone pills, rotating-seal accent. `id="contact"`. |
 | SmIcons | [SmIcons.tsx](../src/components/sections/social-media/SmIcons.tsx) | Page icon set: `Compass`, `Care`, `Presentation`, `Camera`, `Spark`, `Check`, `Mail`, `Phone`, `Quote`. |
 

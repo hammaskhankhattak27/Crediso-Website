@@ -10,7 +10,7 @@ import { Certifications } from "@/components/sections/Certifications";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { Ticker } from "@/components/sections/Ticker";
 import { Blog } from "@/components/sections/Blog";
-import { Testimonials } from "@/components/sections/Testimonials";
+import { Reviews } from "@/components/sections/Reviews";
 import { Contact } from "@/components/sections/Contact";
 
 /** The marketing home page — order mirrors the Figma frame top to bottom. */
@@ -29,7 +29,7 @@ export function Home() {
       <SocialProof />
       <Ticker />
       <Blog />
-      <Testimonials />
+      <Reviews />
       <Contact />
     </>
   );

@@ -158,12 +158,3 @@ export function Phone(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-
-/** Opening quote mark — testimonial cards. */
-export function Quote(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M9.5 6C6.5 7.2 4.8 9.6 4.8 13v5h5.3v-5.3H7.6c0-2 1-3.3 3-4L9.5 6zm9 0c-3 1.2-4.7 3.6-4.7 7v5h5.3v-5.3h-2.5c0-2 1-3.3 3-4L18.5 6z" />
-    </svg>
-  );
-}

@@ -73,7 +73,7 @@ export function WebHero({
             </p>
           )}
 
-          <p className="mt-7 max-w-xl font-body text-lg leading-relaxed text-graphite">{lead}</p>
+          <p className="mt-7 max-w-xl font-body text-lg leading-relaxed text-ink">{lead}</p>
 
           <div className="mt-9 flex flex-wrap gap-4">
             <Button href={primaryCta.href}>{primaryCta.label}</Button>

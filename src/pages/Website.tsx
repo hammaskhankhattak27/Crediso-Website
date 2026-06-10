@@ -7,6 +7,7 @@ import { WsWeCare } from "@/components/sections/website/WsWeCare";
 import { WsCheck } from "@/components/sections/website/WsCheck";
 import { WsFoerderung } from "@/components/sections/website/WsFoerderung";
 import { WsBereit } from "@/components/sections/website/WsBereit";
+import { Reviews } from "@/components/sections/Reviews";
 import { Contact } from "@/components/sections/Contact";
 
 /** Website-creation service page — order mirrors the Figma frame top to bottom. */
@@ -21,6 +22,7 @@ export function Website() {
       <WsWeCare />
       <WsCheck />
       <WsFoerderung />
+      <Reviews />
       <WsBereit />
       <Contact />
     </>

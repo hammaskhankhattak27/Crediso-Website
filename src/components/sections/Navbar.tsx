@@ -81,7 +81,7 @@ export function Navbar() {
                           <li key={child.path}>
                             <NavLink
                               to={child.path!}
-                              className="font-body text-[15px] leading-snug text-graphite transition-colors hover:text-teal-deep"
+                              className="font-body text-[15px] leading-snug text-ink transition-colors hover:text-teal-deep"
                             >
                               {child.label}
                             </NavLink>
@@ -175,7 +175,7 @@ export function Navbar() {
                           key={child.path}
                           to={child.path!}
                           onClick={close}
-                          className="block py-1.5 pl-3 font-body text-base text-graphite"
+                          className="block py-1.5 pl-3 font-body text-base text-ink"
                         >
                           {child.label}
                         </NavLink>

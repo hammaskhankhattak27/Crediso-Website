@@ -13,7 +13,7 @@ export function GaWarum() {
             <br />
             vertrauen solltest
           </h2>
-          <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-graphite">
+          <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-ink">
             Beim Einrichten der Google Ads Kampagne gibt es viel zu beachten. Eine effektive Kampagne
             benötigt eine durchdachte Strategie und sollte unbedingt von Profis aufgesetzt werden.
             Ansonsten kann es schnell dazu führen, dass du dein Werbebudget aus dem Fenster wirfst

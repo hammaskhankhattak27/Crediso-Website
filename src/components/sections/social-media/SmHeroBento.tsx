@@ -75,7 +75,7 @@ export function SmHeroBento() {
           <h1 className="mt-3 h-display text-ink">Social Media, das wirklich funktioniert.</h1>
         </div>
         <div className="lg:pb-3">
-          <p className="font-body text-lg leading-relaxed text-graphite">{LEAD}</p>
+          <p className="font-body text-lg leading-relaxed text-ink">{LEAD}</p>
           <div className="mt-6">
             <Button href="#contact">Kostenlos beraten lassen</Button>
           </div>

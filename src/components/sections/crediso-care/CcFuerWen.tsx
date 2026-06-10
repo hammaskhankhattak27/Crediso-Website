@@ -1,5 +1,3 @@
-import { Check } from "./CcIcons";
-
 const ITEMS = [
   "Du hast eine professionelle Website und willst sicherstellen, dass sie es bleibt.",
   "Dein Team braucht regelmäßig Änderungen, aber niemand intern ist dafür zuständig.",
@@ -12,34 +10,30 @@ export function CcFuerWen() {
   return (
     <section className="bg-paper-cool section-y">
       <div className="section-shell">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
-          {/* Heading */}
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <span className="font-display text-base font-medium uppercase tracking-wide text-ink-soft">
-              Für wen
-            </span>
-            <h2 className="mt-4 h-display text-ink">Für wen ist Crediso Care?</h2>
-            <p className="mt-6 max-w-md font-body text-lg leading-relaxed text-graphite">
-              Crediso Care ist das Richtige für dich, wenn dir mindestens einer dieser Punkte bekannt
-              vorkommt.
-            </p>
-          </div>
-
-          {/* Checklist */}
-          <ul className="flex flex-col gap-4">
-            {ITEMS.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-4 rounded-card border border-ink bg-paper p-6"
-              >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mint text-teal-deep">
-                  <Check className="h-5 w-5" />
-                </span>
-                <span className="font-body text-lg leading-snug text-ink-soft">{item}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="max-w-3xl">
+          <h2 className="h-display text-ink">Für wen ist Crediso Care?</h2>
+          <p className="mt-6 font-body text-lg leading-relaxed text-ink">
+            Crediso Care ist das Richtige für dich, wenn dir mindestens einer dieser Punkte bekannt
+            vorkommt.
+          </p>
         </div>
+
+        {/* Editorial numbered list — big index figures, hairline rows, hover highlight */}
+        <ul className="mt-12 border-t border-ink/10">
+          {ITEMS.map((item, i) => (
+            <li
+              key={item}
+              className="group grid grid-cols-[auto_minmax(0,1fr)] items-baseline gap-6 border-b border-ink/10 py-6 transition-colors duration-200 hover:bg-mint/30 md:gap-10 md:py-8"
+            >
+              <span className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold leading-none tracking-tight text-teal-deep/40 transition-colors duration-200 group-hover:text-teal-deep">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="font-display text-[clamp(1.25rem,2.6vw,1.875rem)] font-medium leading-snug tracking-tight text-ink-soft">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

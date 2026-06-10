@@ -100,9 +100,9 @@
     @apply overflow-x-clip;
   }
 
-  /* Copy text is Avenir (LT Std) Book at graphite #333 per the brand spec. */
+  /* Copy text is Avenir (LT Std) Book in pure black (#000) per the brand spec. */
   body {
-    @apply bg-paper text-graphite font-body antialiased;
+    @apply bg-paper text-ink font-body antialiased;
     /* clip (not hidden) keeps decorative overhangs from causing horizontal
        scroll on mobile without breaking the sticky navbar */
     @apply overflow-x-clip;

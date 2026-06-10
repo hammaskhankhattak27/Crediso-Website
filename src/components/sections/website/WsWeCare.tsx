@@ -28,7 +28,7 @@ export function WsWeCare() {
                 <br />
                 {item.title[1]}
               </h3>
-              <p className="mt-3 font-body text-lg leading-relaxed text-graphite">{item.body}</p>
+              <p className="mt-3 font-body text-lg leading-relaxed text-ink">{item.body}</p>
             </div>
           ))}
         </div>
@@ -46,7 +46,7 @@ export function WsWeCare() {
             Hand.
           </p>
           <div className="mt-8 self-end">
-            <Button href="#contact" variant="light">
+            <Button href="/crediso-care" variant="light">
               Mehr über Crediso Care
             </Button>
           </div>

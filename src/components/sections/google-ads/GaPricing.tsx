@@ -20,7 +20,7 @@ export function GaPricing() {
             <br />
             Deinen Erfolg
           </h2>
-          <p className="mt-6 max-w-[483px] font-body text-lg leading-relaxed text-graphite">
+          <p className="mt-6 max-w-[483px] font-body text-lg leading-relaxed text-ink">
             Wir übernehmen deine Google Ads Kampagnen – von der Strategie bis zur laufenden
             Optimierung – damit du dich auf dein Kerngeschäft konzentrieren kannst.
           </p>
@@ -36,7 +36,7 @@ export function GaPricing() {
             {FEATURES.map((feature) => (
               <li key={feature} className="flex items-start gap-3">
                 <span className="mt-[0.6em] h-2 w-2 shrink-0 rounded-full bg-ink-soft" />
-                <span className="font-body text-xl leading-snug text-graphite">{feature}</span>
+                <span className="font-body text-xl leading-snug text-ink">{feature}</span>
               </li>
             ))}
           </ul>

@@ -17,7 +17,7 @@ export function GaMaximiere() {
               <br />
               mehr qualifizierte Anfragen.
             </p>
-            <div className="mt-6 max-w-lg space-y-5 font-body text-lg leading-relaxed text-graphite">
+            <div className="mt-6 max-w-lg space-y-5 font-body text-lg leading-relaxed text-ink">
               <p>
                 Wir richten deine Google Ads so ein, dass dein Unternehmen genau dann sichtbar ist,
                 wenn potenzielle Kund:innen aktiv nach deinen Produkten oder Leistungen suchen.

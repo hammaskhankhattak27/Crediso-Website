@@ -10,7 +10,7 @@ interface FaqItem {
   link?: { label: string; to: string };
 }
 
-const FAQS: FaqItem[] = [
+export const FAQS: FaqItem[] = [
   {
     question: "Kann ich Crediso Care auch buchen, wenn Crediso meine Website nicht gebaut hat?",
     answer:
@@ -55,39 +55,33 @@ export function CcFaq() {
 
   return (
     <section id="faq" className="section-shell section-y">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-16">
-        {/* Intro + CTA — sticks alongside the list on large screens */}
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:gap-16">
+        {/* Plain intro — text only, sticks alongside the list on large screens */}
         <div className="lg:sticky lg:top-28 lg:self-start">
           <h2 className="h-display-sm text-ink">
             Häufige Fragen
             <br />
             zu Crediso Care
           </h2>
-          <p className="mt-6 max-w-md font-body text-lg leading-relaxed text-graphite">
+          <p className="mt-6 font-body text-lg leading-relaxed text-ink">
             Alles Wichtige rund um Pflege, Pakete und Zusammenarbeit. Deine Frage ist nicht dabei?
           </p>
           <div className="mt-8">
-            <Button href="#contact" variant="outline" size="md">
+            <Button href="#contact" size="md">
               Frag uns direkt
             </Button>
           </div>
         </div>
 
-        {/* Accordion */}
-        <dl className="flex flex-col gap-4">
+        {/* Numbered list — hairline dividers, no cards */}
+        <dl className="border-t border-ink/10">
           {FAQS.map((item, i) => {
             const isOpen = open.includes(i);
             const panelId = `cc-faq-panel-${i}`;
             const buttonId = `cc-faq-button-${i}`;
 
             return (
-              <div
-                key={item.question}
-                className={cn(
-                  "rounded-card border border-ink transition-colors duration-200",
-                  isOpen ? "bg-mint" : "bg-paper hover:bg-mint/30",
-                )}
-              >
+              <div key={item.question} className="border-b border-ink/10">
                 <dt>
                   <button
                     id={buttonId}
@@ -95,14 +89,22 @@ export function CcFaq() {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggle(i)}
-                    className="flex w-full items-center justify-between gap-5 p-6 text-left md:p-7"
+                    className="group flex w-full items-start gap-5 py-6 text-left"
                   >
-                    <span className="font-display text-lg font-semibold leading-snug text-ink-soft md:text-xl">
+                    <span className="w-8 shrink-0 font-display text-lg font-bold leading-snug text-teal-deep md:text-xl">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span
+                      className={cn(
+                        "flex-1 font-display text-lg font-semibold leading-snug transition-colors duration-200 md:text-xl",
+                        isOpen ? "text-ink" : "text-ink-soft group-hover:text-teal-deep",
+                      )}
+                    >
                       {item.question}
                     </span>
                     <Plus
                       className={cn(
-                        "h-6 w-6 shrink-0 text-teal-deep transition-transform duration-300 ease-out",
+                        "mt-0.5 h-6 w-6 shrink-0 text-teal-deep transition-transform duration-300 ease-out",
                         isOpen && "rotate-45",
                       )}
                     />
@@ -118,8 +120,8 @@ export function CcFaq() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-6 md:px-7 md:pb-7">
-                      <p className="font-body text-lg leading-relaxed text-graphite">
+                    <div className="pb-6 pl-[calc(2rem+1.25rem)] pr-6">
+                      <p className="max-w-2xl font-body text-lg leading-relaxed text-ink">
                         {item.answer}
                       </p>
                       {item.link && (

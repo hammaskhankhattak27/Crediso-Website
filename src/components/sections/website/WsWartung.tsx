@@ -15,7 +15,7 @@ export function WsWartung() {
         {/* Copy */}
         <div>
           <h2 className="h-display text-ink">Einfache Wartung, volle Kontrolle</h2>
-          <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-graphite">
+          <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink">
             Wir entwickeln Websites die du selbst pflegen kannst, ganz ohne Programmierkenntnisse.
             Wir zeigen dir wie du Inhalte bearbeitest, Seiten anlegst und Bilder austauschst. Deine
             Website, deine Kontrolle.

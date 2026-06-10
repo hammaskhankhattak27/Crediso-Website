@@ -22,7 +22,7 @@ export function Offers() {
             </p>
           </div>
           <div className="mt-8">
-            <Button size="md">Mehr dazu</Button>
+            <Button href="/crediso-care" size="md">Mehr dazu</Button>
           </div>
         </article>
 

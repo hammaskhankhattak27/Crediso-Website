@@ -41,7 +41,7 @@ export function GaFormats() {
             <h3 className="font-display text-[2rem] font-semibold leading-tight tracking-tight text-green-ink md:text-[2.4rem]">
               {format.title}
             </h3>
-            <p className="mt-4 max-w-xl font-body text-lg leading-relaxed text-graphite">
+            <p className="mt-4 max-w-xl font-body text-lg leading-relaxed text-ink">
               {format.body}
             </p>
             <div className="mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-sage pt-6">

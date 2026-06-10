@@ -38,11 +38,8 @@ export function SmLeistungen() {
   return (
     <section id="leistungen" className="section-shell section-y">
       <div className="max-w-3xl">
-        <span className="font-display text-base font-medium uppercase tracking-wide text-ink-soft">
-          Leistungsübersicht
-        </span>
-        <h2 className="mt-4 h-display text-ink">Findet die passende Lösung</h2>
-        <p className="mt-6 font-body text-lg leading-relaxed text-graphite">
+        <h2 className="h-display text-ink">Findet die passende Lösung</h2>
+        <p className="mt-6 font-body text-lg leading-relaxed text-ink">
           Social Media ist nicht für jedes Unternehmen gleich. Manche brauchen jemanden, der alles
           übernimmt. Andere wollen ihr Team fit machen. Und wieder andere brauchen einfach
           professionellen Content. Schaut, was für euch passt.
@@ -65,7 +62,7 @@ export function SmLeistungen() {
                 <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-ink transition-colors group-hover:text-teal-deep md:text-4xl lg:text-5xl">
                   {k.title}
                 </h3>
-                <p className="mt-2 font-body text-base leading-relaxed text-graphite md:text-lg">
+                <p className="mt-2 font-body text-base leading-relaxed text-ink md:text-lg">
                   {k.audience}
                 </p>
               </div>

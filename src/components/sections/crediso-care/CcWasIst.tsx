@@ -1,55 +1,73 @@
-import { Pulse } from "./CcIcons";
+import { Pulse, Chat } from "./CcIcons";
 
 const MONITORED = ["Sicherheit", "Ladezeit", "Google-Ranking"];
 
 export function CcWasIst() {
   return (
-    <section className="bg-teal-deep section-y text-paper">
-      <div className="section-shell">
-        <span className="font-display text-base font-medium uppercase tracking-wide text-paper/70">
-          Was Crediso Care ist
-        </span>
-        <h2 className="mt-6 max-w-4xl h-display text-paper">
+    <section className="section-shell section-y">
+      <div className="max-w-3xl">
+        <h2 className="h-display text-ink">
           Ein Fixpreis. Kein Zögern. Keine Überraschungen.
         </h2>
+      </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* Left — the promise + the WhatsApp callout */}
-          <div>
-            <p className="font-body text-lg leading-relaxed text-paper/90">
-              Crediso Care ist das Rundum-sorglos-Paket für deinen Onlineauftritt. Jeder in deinem
-              Team kann sich jederzeit melden: ein neues Produkt kommt raus, eine Aktion startet am
-              Montag, jemand hat eine Idee für ein Pop-up. Alles ist im Fixpreis enthalten – ohne
-              zusätzliche Rechnung, ohne komplizierte Freigabeprozesse.
-            </p>
-            <blockquote className="mt-8 rounded-card border border-paper/20 p-6 md:p-7">
-              <p className="font-display text-xl font-medium leading-snug text-paper md:text-2xl">
-                „Du schickst uns deine Idee während der Autofahrt als WhatsApp-Sprachnachricht? Kein
-                Problem – wir sind schon dran.“
-              </p>
-            </blockquote>
-          </div>
+      {/* Copy left, image right — vertically centred against a landscape photo. */}
+      <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+        {/* Promise + what we watch in the background */}
+        <div className="flex flex-col">
+          <p className="font-body text-lg leading-relaxed text-ink">
+            Crediso Care ist das Rundum-sorglos-Paket für deinen Onlineauftritt. Jeder in deinem
+            Team kann sich jederzeit melden – neues Produkt, Aktion am Montag, Idee für ein Pop-up.
+            Alles ist im Fixpreis enthalten, ohne zusätzliche Rechnung.
+          </p>
 
-          {/* Right — what we watch in the background */}
-          <div className="flex flex-col">
-            <p className="font-body text-lg leading-relaxed text-paper/90">
-              Dabei bleibt es nicht bei den Inhalten. Im Hintergrund überwachen wir laufend:
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {MONITORED.map((item) => (
-                <span
-                  key={item}
-                  className="inline-flex items-center gap-2.5 rounded-pill border border-paper/30 px-5 py-3"
-                >
-                  <Pulse className="h-5 w-5 text-paper" />
-                  <span className="font-display text-base font-semibold text-paper">{item}</span>
+          <p className="mt-8 font-display text-base font-medium uppercase tracking-wide text-ink-soft">
+            Im Hintergrund überwachen wir laufend
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-3">
+            {MONITORED.map((item) => (
+              <li
+                key={item}
+                className="inline-flex items-center gap-2.5 rounded-pill border border-ink/15 bg-paper px-5 py-3"
+              >
+                <span className="relative flex h-2.5 w-2.5 shrink-0">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-deep/50" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-teal-deep" />
                 </span>
-              ))}
-            </div>
-            <p className="mt-8 font-display text-2xl font-medium leading-snug text-paper md:text-[1.75rem]">
-              Damit deine Website immer einen Schritt voraus ist.
-            </p>
+                <span className="font-display text-base font-semibold text-ink">{item}</span>
+                <Pulse className="h-5 w-5 text-teal-deep" />
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-8 max-w-md font-display text-[clamp(1.25rem,2.4vw,1.75rem)] font-medium leading-snug tracking-tight text-teal-deep">
+            Damit deine Website immer einen Schritt voraus ist.
+          </p>
+        </div>
+
+        {/* Landscape photo in a fixed-aspect card; the WhatsApp voice-note sits
+            in a mint chat-bubble below it (overlapping the corner on desktop). */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-card">
+            <img
+              src="/assets/images/website/foerderung-team.png"
+              alt="Das Crediso-Team kümmert sich um die Website seiner Kund:innen"
+              loading="lazy"
+              className="aspect-[3/2] w-full object-cover"
+            />
           </div>
+
+          <figure className="mt-5 rounded-card border border-ink/10 bg-mint p-6 lg:absolute lg:-bottom-6 lg:-left-6 lg:mt-0 lg:max-w-xs">
+            <figcaption className="flex items-center gap-2 text-teal-deep">
+              <Chat className="h-5 w-5 shrink-0" />
+              <span className="font-display text-sm font-semibold uppercase tracking-wide">
+                WhatsApp-Sprachnachricht
+              </span>
+            </figcaption>
+            <blockquote className="mt-3 font-display text-lg font-medium leading-snug text-ink">
+              „Idee während der Autofahrt durchgegeben? Kein Problem – wir sind schon dran.“
+            </blockquote>
+          </figure>
         </div>
       </div>
     </section>

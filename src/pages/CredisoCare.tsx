@@ -4,9 +4,39 @@ import { CcWasIst } from "@/components/sections/crediso-care/CcWasIst";
 import { CcLeistungen } from "@/components/sections/crediso-care/CcLeistungen";
 import { CcPreise } from "@/components/sections/crediso-care/CcPreise";
 import { CcFuerWen } from "@/components/sections/crediso-care/CcFuerWen";
-import { CcTestimonials } from "@/components/sections/crediso-care/CcTestimonials";
-import { CcFaq } from "@/components/sections/crediso-care/CcFaq";
+import { Reviews } from "@/components/sections/Reviews";
+import { CcFaq, FAQS } from "@/components/sections/crediso-care/CcFaq";
 import { CcKontakt } from "@/components/sections/crediso-care/CcKontakt";
+
+/** Structured data for the page — FAQPage (built from the same FAQ list the
+ *  CcFaq section renders) + LocalBusiness, per the copy brief. */
+const STRUCTURED_DATA = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Crediso",
+    url: "https://crediso.io/crediso-care/",
+    image: "https://crediso.io/assets/icons/logo.png",
+    email: "hallo@crediso.io",
+    telephone: "+43 664 136 47 86",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Schmiedgasse 29",
+      postalCode: "8010",
+      addressLocality: "Graz",
+      addressCountry: "AT",
+    },
+  },
+];
 
 /** Crediso Care — website-care subscription. A "Web" category page built on the
  *  shared WebHero plus its own Cc* sections. Order mirrors the approved copy:
@@ -15,6 +45,10 @@ import { CcKontakt } from "@/components/sections/crediso-care/CcKontakt";
 export function CredisoCare() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+      />
       <WebHero
         title="Crediso Care"
         subtitle="Das Rundum-sorglos-Paket für deine Website."
@@ -36,7 +70,7 @@ export function CredisoCare() {
       <CcLeistungen />
       <CcPreise />
       <CcFuerWen />
-      <CcTestimonials />
+      <Reviews />
       <CcFaq />
       <CcKontakt />
     </>

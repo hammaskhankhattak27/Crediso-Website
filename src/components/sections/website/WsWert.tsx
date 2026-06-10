@@ -21,11 +21,11 @@ export function WsWert() {
 
       <div className="mt-10 flex flex-col gap-6">
         {/* 01 — Datenschutz (mint) */}
-        <article className="grid grid-cols-1 items-center gap-8 rounded-card bg-mint p-8 text-graphite md:p-12 lg:grid-cols-[1fr_auto]">
+        <article className="grid grid-cols-1 items-center gap-8 rounded-card bg-mint p-8 text-ink md:p-12 lg:grid-cols-[1fr_auto]">
           <div>
-            <span className={cn(numCls, "text-graphite")}>01</span>
-            <h3 className={cn(titleCls, "text-graphite")}>Datenschutz</h3>
-            <p className={cn(bodyCls, "text-graphite")}>
+            <span className={cn(numCls, "text-ink")}>01</span>
+            <h3 className={cn(titleCls, "text-ink")}>Datenschutz</h3>
+            <p className={cn(bodyCls, "text-ink")}>
               Datenschutz ist bei uns kein Zusatz, sondern von Anfang an eingeplant. Cookie-Banner,
               Tracking, Google Analytics, Meta Pixel. Alles rechtlich sauber, damit du auf der
               sicheren Seite bist.

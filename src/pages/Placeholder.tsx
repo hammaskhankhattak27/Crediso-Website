@@ -14,7 +14,7 @@ export function Placeholder({ title }: PlaceholderProps) {
         Crediso
       </span>
       <h1 className="mt-4 h-display text-ink">{title}</h1>
-      <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-graphite">
+      <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink">
         Diese Seite befindet sich gerade im Aufbau.
       </p>
     </section>
