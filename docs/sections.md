@@ -2,7 +2,7 @@
 
 Every routed page, section, and reusable primitive in the app, with its file and role. Sections are presentational bands; pages compose them in Figma top-to-bottom order. See [architecture.md](architecture.md) for how it all fits together and [design.md](design.md) for the visual rules.
 
-> Naming: home/shared sections have plain names; Google Ads page sections use the **`Ga*`** prefix; Website page sections use **`Ws*`**; Crediso Care uses **`Cc*`**. A new page introduces its own `Xx*` prefix in a matching `components/sections/<x>/` folder. Sections shared across a whole service *category* live in a category folder (e.g. `sections/web/` holds the parameterized `WebHero`).
+> Naming: home/shared sections have plain names; Google Ads page sections use the **`Ga*`** prefix; Website page sections use **`Ws*`**; Crediso Care uses **`Cc*`**; Webshop uses **`Os*`** (Onlineshop). A new page introduces its own `Xx*` prefix in a matching `components/sections/<x>/` folder. Sections shared across a whole service *category* live in a category folder (e.g. `sections/web/` holds the parameterized `WebHero`).
 
 ---
 
@@ -13,6 +13,7 @@ Every routed page, section, and reusable primitive in the app, with its file and
 | Home (Startseite) | [Home.tsx](../src/pages/Home.tsx) | `/` | Hero → About → Services → CtaBanner → Projects → Offers → Sustainability → Newsletter → Certifications → SocialProof → Ticker → Blog → **Reviews** → Contact |
 | Google Ads | [GoogleAds.tsx](../src/pages/GoogleAds.tsx) | `/google-ads` | GaHero → GaBenefits → GaWarum → GaVersprechen → GaPartner → GaPricing → GaFormats → GaMaximiere → GaSuccessstory → **Reviews** → GaFaq → GaLassUnsStarten → **Contact** |
 | Website | [Website.tsx](../src/pages/Website.tsx) | `/website` | WsHero → WsVerkaufen → WsFahrplan → WsWert → WsWartung → WsWeCare → WsCheck → WsFoerderung → **Reviews** → WsBereit → **Contact** |
+| Webshop | [Webshop.tsx](../src/pages/Webshop.tsx) | `/webshop` | **WebHero** → OsLeistungen → OsGruenderin → OsFahrplan → OsPlattformen → OsBereit → **Contact** |
 | Crediso Care | [CredisoCare.tsx](../src/pages/CredisoCare.tsx) | `/crediso-care` | **WebHero** → CcProblem → CcWasIst → CcLeistungen → CcPreise → CcFuerWen → **Reviews** → CcFaq → CcKontakt |
 | Social Media | [SocialMedia.tsx](../src/pages/SocialMedia.tsx) | `/social-media` | SmHeroBento → SmTrust → SmLeistungen → SmNichtSicher → **Reviews** (`accent="lavender"`) → SmKontakt |
 | Placeholder | [Placeholder.tsx](../src/pages/Placeholder.tsx) | (all undesigned IA paths) | Blank stub — H1 = page title + "im Aufbau" copy. Used until a page's real sections are built. |
@@ -108,6 +109,19 @@ Built from the approved Crediso Care copy (problem → what-it-is → what's inc
 | CcFaq | [CcFaq.tsx](../src/components/sections/crediso-care/CcFaq.tsx) | FAQ — plain text intro on the left (sticky, no card) + numbered accordion on the right (hairline dividers, no cards; number + question, `Plus` toggle, multiple panels open). 6 Care questions; item 5 links to `/seo`. `id="faq"`. |
 | CcKontakt | [CcKontakt.tsx](../src/components/sections/crediso-care/CcKontakt.tsx) | "Deine Website in guten Händen" closing band — dark `teal-deep` card, white CTA, and interactive e-mail/phone/address pills. `id="contact"` — target of every `#contact` CTA. |
 | CcIcons | [CcIcons.tsx](../src/components/sections/crediso-care/CcIcons.tsx) | Page icon set: `Shield`, `CloudBackup`, `Gauge`, `Pen`, `Pulse`, `Headset`, `Search`, `Clock`, `Check`, `Plus`, `Mail`, `Phone`, `MapPin`. |
+
+## Webshop sections — [src/components/sections/webshop/](../src/components/sections/webshop/)
+
+The Webshop/Onlineshop service page (`Os*` = Onlineshop) — Figma frame "Dein Onlineshop", built on the shared `WebHero`.
+
+| Section | File | Role |
+|---|---|---|
+| OsLeistungen | [OsLeistungen.tsx](../src/components/sections/webshop/OsLeistungen.tsx) | "Unsere Leistungen im E-Commerce" bento (sage top hairline) — three pillar cards: Shop-Aufbau (`mint`), Design/Content (`ink-soft`), SEO & Marketing (`teal-deep`, full width). Each grounds its bullet list with a decorative product-UI mock (storefront, photo grid + UX stats, keyword ranking + ads panel) bleeding out of the card's bottom edge. `id="leistungen"`. |
+| OsGruenderin | [OsGruenderin.tsx](../src/components/sections/webshop/OsGruenderin.tsx) | "Sara, unsere Gründerin" — editorial magazine profile: tall portrait left (bottom gradient + name plate), her career as a CV-style ledger right (oversized teal display figures — OTTO / 100+ / Product Owner / 2019 — with hairline dividers), closed by the brand quote in large italic display type. |
+| OsFahrplan | [OsFahrplan.tsx](../src/components/sections/webshop/OsFahrplan.tsx) | "Unser Fahrplan" — the five project phases as an expanding accordion row: active phase = wide `teal-deep` panel (number, title, copy), the rest collapse into slim teal-bordered cards with vertical titles (horizontal on mobile). `id="fahrplan"`. |
+| OsPlattformen | [OsPlattformen.tsx](../src/components/sections/webshop/OsPlattformen.tsx) | "WordPress oder Shopify?" — two comparison cards (mint-toned WordPress vs ink-toned Shopify: header band with logo/tagline/title, bullet list, bottom "Ideal für:" pill), then the "Nicht sicher?" CTA. `id="plattformen"`. |
+| OsBereit | [OsBereit.tsx](../src/components/sections/webshop/OsBereit.tsx) | Closing conversion band — full-width `teal-deep` card: decorative trust orbit (concentric rings + frosted proof chips) left, headline + light/outline-light CTAs right. |
+| OsIcons | [OsIcons.tsx](../src/components/sections/webshop/OsIcons.tsx) | Page icon set: `Cart`, `Building`, `Star`, `Zap`, `Camera`, `TrendUp`, `WordPressLogo`, `ShoppingBag`. |
 
 ## Social Media sections — [src/components/sections/social-media/](../src/components/sections/social-media/)
 

@@ -5,6 +5,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { Home } from "@/pages/Home";
 import { GoogleAds } from "@/pages/GoogleAds";
 import { Website } from "@/pages/Website";
+import { Webshop } from "@/pages/Webshop";
 import { CredisoCare } from "@/pages/CredisoCare";
 import { Seo } from "@/pages/Seo";
 import { SocialMedia } from "@/pages/SocialMedia";
@@ -15,6 +16,7 @@ import { flattenRoutes } from "@/lib/site";
  *  falls back to a blank <Placeholder> until its sections are built. */
 const BUILT_PAGES: Record<string, ReactElement> = {
   "/website": <Website />,
+  "/webshop": <Webshop />,
   "/google-ads": <GoogleAds />,
   "/crediso-care": <CredisoCare />,
   "/seo": <Seo />,

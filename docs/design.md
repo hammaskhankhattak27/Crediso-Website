@@ -280,7 +280,7 @@ Current IA / routes, all wrapped in the shared `Layout`:
 | **Leistungen** | — | grouping, no page |
 | ↳ **Web** | — | grouping, no page — only its sub-services are pages |
 | `/website` | [pages/Website.tsx](../src/pages/Website.tsx) | Website service landing — sections in [website/](../src/components/sections/website/) (`Ws*`) |
-| `/webshop` | Placeholder | blank |
+| `/webshop` | [pages/Webshop.tsx](../src/pages/Webshop.tsx) | Webshop/Onlineshop service landing — built on the shared [web/WebHero](../src/components/sections/web/WebHero.tsx) + its own `Os*` sections in [webshop/](../src/components/sections/webshop/); reuses `Contact` |
 | `/crediso-care` | [pages/CredisoCare.tsx](../src/pages/CredisoCare.tsx) | Crediso Care service landing — built on the shared [web/WebHero](../src/components/sections/web/WebHero.tsx) + its own `Cc*` sections in [crediso-care/](../src/components/sections/crediso-care/) |
 | `/seo` | Placeholder | blank |
 | `/google-ads` | [pages/GoogleAds.tsx](../src/pages/GoogleAds.tsx) | Google Ads service landing — sections in [google-ads/](../src/components/sections/google-ads/) (`Ga*`) |
