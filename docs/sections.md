@@ -16,6 +16,10 @@ Every routed page, section, and reusable primitive in the app, with its file and
 | Webshop | [Webshop.tsx](../src/pages/Webshop.tsx) | `/webshop` | **WebHero** → OsLeistungen → OsGruenderin → OsFahrplan → OsPlattformen → OsBereit → **Contact** |
 | Crediso Care | [CredisoCare.tsx](../src/pages/CredisoCare.tsx) | `/crediso-care` | **WebHero** → CcProblem → CcWasIst → CcLeistungen → CcPreise → CcFuerWen → **Reviews** → CcFaq → CcKontakt |
 | Social Media | [SocialMedia.tsx](../src/pages/SocialMedia.tsx) | `/social-media` | SmHeroBento → SmTrust → SmLeistungen → SmNichtSicher → **Reviews** (`accent="lavender"`) → SmKontakt |
+| SM Betreuung | [SocialMediaBetreuung.tsx](../src/pages/SocialMediaBetreuung.tsx) | `/social-media/betreuung` | **SmHero** → **SmTrust** → SmbUnterschied → SmbStrategie → SmbBetreuung → SmbAds → SmbBranchen → **Reviews** (`lavender`) → SmbFaq → **Contact** |
+| SM Mentoring | [SocialMediaMentoring.tsx](../src/pages/SocialMediaMentoring.tsx) | `/social-media/mentoring` | **SmHero** → SmmFeatures → SmmMentor → SmmPakete → **Reviews** (`lavender`) → **Contact** |
+| SM Workshops | [SocialMediaWorkshops.tsx](../src/pages/SocialMediaWorkshops.tsx) | `/social-media/workshops` | **SmHero** → SmwAngebote → SmwFoerderung → **Reviews** (`lavender`) → **Contact** |
+| SM Content Production | [SocialMediaContentProduction.tsx](../src/pages/SocialMediaContentProduction.tsx) | `/social-media/content-production` | **SmHero** → SmcIntro → SmcFotografie → SmcVideo → SmcCaptions → SmcUgc → **Contact** |
 | Placeholder | [Placeholder.tsx](../src/pages/Placeholder.tsx) | (all undesigned IA paths) | Blank stub — H1 = page title + "im Aufbau" copy. Used until a page's real sections are built. |
 
 **Bold** = shared section reused verbatim. All other IA routes (`/video`, `/foto`, `/blog`, `/kontakt`, …) currently render `Placeholder`.
@@ -35,7 +39,7 @@ Reused across multiple pages — never fork these.
 |---|---|---|
 | Navbar | [Navbar.tsx](../src/components/sections/Navbar.tsx) | Sticky header; full-width `Leistungen` mega-menu (desktop) + accordion (mobile), data-driven from `SITE_NAV`. |
 | Footer | [Footer.tsx](../src/components/sections/Footer.tsx) | Site footer — dark `ink-soft` (#161616) background, `paper` text, mint accents/hover; social buttons, slogan. |
-| Contact | [Contact.tsx](../src/components/sections/Contact.tsx) | `id="contact"` — contact form + details. The target of every `#contact` CTA. |
+| Contact | [Contact.tsx](../src/components/sections/Contact.tsx) | `id="contact"` — contact form + Sara/Frank avatars. The target of every `#contact` CTA. **Design is fixed/identical everywhere**; optional props vary only the content per page: `heading`, `intro`, `select` ({label, options} → a dropdown after E-Mail, e.g. package/workshop chooser), `submitLabel`. No props = the site-default form. |
 | Reviews | [Reviews.tsx](../src/components/sections/Reviews.tsx) | Shared "Kundenstimmen" bento used on **every** page — featured quote (2×2) + team-photo tile + three-up quote row, quote mark + stars, `id="testimonials"`. Brand-green default content; `accent` prop swaps only the featured tile's surface (`mint` everywhere, `lavender` on Social Media). Pass `featured` / `voices` / `photo` / `heading` to override copy. |
 
 ## Home-only sections — [src/components/sections/](../src/components/sections/)
@@ -136,7 +140,43 @@ The Social Media category overview — implements the client's approved copy (Ma
 | SmLeistungenArt | [SmLeistungenArt.tsx](../src/components/sections/social-media/SmLeistungenArt.tsx) | The four human-free, flat-geometric SVG illustrations for the cards (`ArtBetreuung` managed feed · `ArtMentoring` growth path · `ArtWorkshops` idea lightbulb · `ArtContent` camera lens), drawn only from tokens via `fill-`/`stroke-` utilities. |
 | SmNichtSicher | [SmNichtSicher.tsx](../src/components/sections/social-media/SmNichtSicher.tsx) | "Nicht sicher, was passt?" low-pressure consultation band — a dark `teal-deep` panel with copy + a light CTA to `#contact`. |
 | SmKontakt | [SmKontakt.tsx](../src/components/sections/social-media/SmKontakt.tsx) | Closing **"Bereit loszulegen?"** contact band — the target of every `#contact` CTA. Dark `teal-deep` panel, light primary CTA, interactive e-mail/phone pills, rotating-seal accent. `id="contact"`. |
-| SmIcons | [SmIcons.tsx](../src/components/sections/social-media/SmIcons.tsx) | Page icon set: `Compass`, `Care`, `Presentation`, `Camera`, `Spark`, `Check`, `Mail`, `Phone`, `Quote`. |
+| SmIcons | [SmIcons.tsx](../src/components/sections/social-media/SmIcons.tsx) | Page icon set: `Compass`, `Care`, `Presentation`, `Camera`, `Spark`, `Check`, `Clock`, `Mail`, `Phone`, plus sub-page icons `Pen`, `Layers`, `Chat`, `Chart`, `Megaphone`, `Target`, `Plus` (accordion marker). |
+
+### Sub-page sections (one bespoke layout each — no archetype repeats across the four sub-pages)
+
+`SmHero` (parameterized category hero, with an optional 3-stat trust cluster at the lower-right) + `SmTrust` (Betreuung) and `Reviews` (`lavender`) are reused; the closing **contact form is the shared `Contact`** on every sub-page — same design as the rest of the site, with page-specific heading/intro/dropdown/submit passed as props (Mentoring → package chooser, Workshops → workshop chooser, Content Production → content-type chooser). Every other section below is a unique layout. **These pages carry no green** — lavender is the only accent; dark surfaces use `ink` (black), not `teal-deep`/`mint`.
+
+**Betreuung** — [betreuung/](../src/components/sections/social-media/betreuung/)
+| Section | File | Layout |
+|---|---|---|
+| SmbUnterschied | [SmbUnterschied.tsx](../src/components/sections/social-media/betreuung/SmbUnterschied.tsx) | Borderless **editorial statement** band (border-y), oversized copy with lavender-highlighted phrases. No card/grid. |
+| SmbStrategie | [SmbStrategie.tsx](../src/components/sections/social-media/betreuung/SmbStrategie.tsx) | 3-node **process timeline** — numbered lavender badges on per-column top-rails. |
+| SmbBetreuung | [SmbBetreuung.tsx](../src/components/sections/social-media/betreuung/SmbBetreuung.tsx) | **Sticky heading** (left) beside a divided stack of 4 icon rows (right). |
+| SmbAds | [SmbAds.tsx](../src/components/sections/social-media/betreuung/SmbAds.tsx) | Dark `ink` (black) band, **3 columns split by vertical hairlines**, lavender icons. |
+| SmbBranchen | [SmbBranchen.tsx](../src/components/sections/social-media/betreuung/SmbBranchen.tsx) | 12 industries as a wrapping **pill cluster**. |
+| SmbFaq | [SmbFaq.tsx](../src/components/sections/social-media/betreuung/SmbFaq.tsx) | Single-column **accordion** (native `<details>`), `Plus` marker rotates on open. |
+
+**Mentoring** — [mentoring/](../src/components/sections/social-media/mentoring/)
+| Section | File | Layout |
+|---|---|---|
+| SmmFeatures | [SmmFeatures.tsx](../src/components/sections/social-media/mentoring/SmmFeatures.tsx) | Three reasons as **oversized lavender numerals in zig-zagging editorial rows** (numeral alternates left↔right per row, full-width hairline dividers; stacks on mobile). |
+| SmmMentor | [SmmMentor.tsx](../src/components/sections/social-media/mentoring/SmmMentor.tsx) | **Portrait** with overlapping lavender name-plate + bio. Placeholder name/photo — client supplies real mentor. |
+| SmmPakete | [SmmPakete.tsx](../src/components/sections/social-media/mentoring/SmmPakete.tsx) | **Two-package pricing pair** — featured dark `ink` (black) w/ "★ Beliebteste Wahl" badge + light bordered. |
+
+**Workshops** — [workshops/](../src/components/sections/social-media/workshops/)
+| Section | File | Layout |
+|---|---|---|
+| SmwAngebote | [SmwAngebote.tsx](../src/components/sections/social-media/workshops/SmwAngebote.tsx) | 2×2 grid of **hard offset-shadow cards** (the GaPricing card style: `border-2 border-ink` + `shadow-[5px_5px_0_0_#000]`), green-free with a lavender "−50 %" badge, large Förderpreis over struck Normalpreis, CTA pinned bottom (live data). |
+| SmwFoerderung | [SmwFoerderung.tsx](../src/components/sections/social-media/workshops/SmwFoerderung.tsx) | Lavender band anchored by an **oversized "50%"** stat split. |
+
+**Content Production** — [content-production/](../src/components/sections/social-media/content-production/)
+| Section | File | Layout |
+|---|---|---|
+| SmcIntro | [SmcIntro.tsx](../src/components/sections/social-media/content-production/SmcIntro.tsx) | **Oversized statement** with a lavender-highlighted keyword; supporting copy pushed to the right margin (asymmetric). |
+| SmcFotografie | [SmcFotografie.tsx](../src/components/sections/social-media/content-production/SmcFotografie.tsx) | Image with an **overlapping lavender pill tag** + copy, then a **connected 5-node process ribbon** (numbered lavender circles on one continuous line). |
+| SmcVideo | [SmcVideo.tsx](../src/components/sections/social-media/content-production/SmcVideo.tsx) | **Cinematic dark image-overlay** band, "Klappe zu und ACTION!", twin CTAs (Videoseite + Anfrage). |
+| SmcCaptions | [SmcCaptions.tsx](../src/components/sections/social-media/content-production/SmcCaptions.tsx) | The statement as a **social-caption card** — handle row + caption + ♥/💬 engagement footer (the page's delight moment). |
+| SmcUgc | [SmcUgc.tsx](../src/components/sections/social-media/content-production/SmcUgc.tsx) | Copy + a **content collage** (tall creator image, square post, lavender "@creator" tile). |
 
 ## UI primitives — [src/components/ui/](../src/components/ui/)
 

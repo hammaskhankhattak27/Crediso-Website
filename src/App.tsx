@@ -9,6 +9,10 @@ import { Webshop } from "@/pages/Webshop";
 import { CredisoCare } from "@/pages/CredisoCare";
 import { Seo } from "@/pages/Seo";
 import { SocialMedia } from "@/pages/SocialMedia";
+import { SocialMediaBetreuung } from "@/pages/SocialMediaBetreuung";
+import { SocialMediaMentoring } from "@/pages/SocialMediaMentoring";
+import { SocialMediaWorkshops } from "@/pages/SocialMediaWorkshops";
+import { SocialMediaContentProduction } from "@/pages/SocialMediaContentProduction";
 import { Placeholder } from "@/pages/Placeholder";
 import { flattenRoutes } from "@/lib/site";
 
@@ -21,6 +25,10 @@ const BUILT_PAGES: Record<string, ReactElement> = {
   "/crediso-care": <CredisoCare />,
   "/seo": <Seo />,
   "/social-media": <SocialMedia />,
+  "/social-media/betreuung": <SocialMediaBetreuung />,
+  "/social-media/mentoring": <SocialMediaMentoring />,
+  "/social-media/workshops": <SocialMediaWorkshops />,
+  "/social-media/content-production": <SocialMediaContentProduction />,
 };
 
 function App() {

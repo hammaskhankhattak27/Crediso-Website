@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 
 interface Person {
@@ -59,7 +60,29 @@ function PersonCard({ person }: { person: Person }) {
   );
 }
 
-export function Contact() {
+interface ContactSelect {
+  /** Field label (e.g. "Welches Paket interessiert dich?"). */
+  label: string;
+  /** Dropdown options. */
+  options: string[];
+}
+
+interface ContactProps {
+  /** Heading — defaults to the site-wide two-line "Melde dich jetzt!". */
+  heading?: ReactNode;
+  /** Optional intro paragraph rendered under the heading. */
+  intro?: ReactNode;
+  /** Optional dropdown inserted after E-Mail (e.g. a package / workshop chooser). */
+  select?: ContactSelect;
+  /** Submit button label. */
+  submitLabel?: string;
+}
+
+/** The site-wide contact section. Identical design everywhere (two-column form +
+ *  staggered Sara/Frank avatars, underline fields); only the heading, intro,
+ *  optional dropdown and submit label vary per page via props. `id="contact"` —
+ *  the target of every `#contact` CTA. */
+export function Contact({ heading, intro, select, submitLabel = "Anfrage senden" }: ContactProps = {}) {
   const [agreed, setAgreed] = useState(false);
 
   return (
@@ -70,10 +93,18 @@ export function Contact() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_auto] lg:items-center">
           <div className="lg:max-w-[760px]">
             <h2 className="h-display text-ink">
-              Melde dich jetzt!
-              <br />
-              Wir freuen uns auf dich!
+              {heading ?? (
+                <>
+                  Melde dich jetzt!
+                  <br />
+                  Wir freuen uns auf dich!
+                </>
+              )}
             </h2>
+
+            {intro && (
+              <p className="mt-6 font-body text-lg leading-relaxed text-ink">{intro}</p>
+            )}
 
             <form
               className="mt-12 flex flex-col gap-8 lg:max-w-[640px]"
@@ -92,6 +123,25 @@ export function Contact() {
                 />
               </label>
             ))}
+
+            {select && (
+              <label className="flex flex-col gap-2">
+                <span className="font-body text-xl font-medium text-ink">{select.label}</span>
+                <select
+                  defaultValue=""
+                  className="cursor-pointer border-0 border-b border-ink bg-transparent pb-2 font-body text-lg text-ink focus:border-teal-deep focus:outline-none"
+                >
+                  <option value="" disabled>
+                    Bitte auswählen
+                  </option>
+                  {select.options.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
 
             <label className="flex flex-col gap-2">
               <span className="font-body text-xl font-medium text-ink">Nachricht</span>
@@ -116,7 +166,7 @@ export function Contact() {
 
               <div>
                 <Button type="submit" variant="outline">
-                  Anfrage senden
+                  {submitLabel}
                 </Button>
               </div>
             </form>
