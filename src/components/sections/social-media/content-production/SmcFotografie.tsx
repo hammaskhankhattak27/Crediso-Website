@@ -1,15 +1,16 @@
 const PROZESS = [
-  "Planung & Kick-Off",
-  "Konzept & Moodboard",
-  "Fotoshooting",
-  "Retusche",
-  "Übergabe",
+  { nr: "01", title: "Planung & Kick-Off", desc: "Themen, Saison & Evergreens fürs Jahr." },
+  { nr: "02", title: "Konzept & Moodboard", desc: "Looks, Farben & Bildsprache abgestimmt." },
+  { nr: "03", title: "Fotoshooting", desc: "Location, Requisiten & Statist:innen." },
+  { nr: "04", title: "Retusche", desc: "Feinschliff für ein stimmiges Feed-Bild." },
+  { nr: "05", title: "Übergabe", desc: "Fertige Assets, bereit zum Posten." },
 ];
 
 /** "Social Media Fotografie" — image (with an overlapping lavender pill tag) beside
- *  the copy, then a connected 5-node process ribbon spanning the full width: numbered
- *  lavender circles strung on one continuous line. The ribbon is the section's
- *  signature (distinct from Betreuung's per-column rails). */
+ *  the copy, then the 5-step process rendered as a 35mm film strip: each step is a
+ *  frame (lavender number + label + micro-copy) on a dark strip with sprocket holes
+ *  along both edges. The film-strip motif is the section's photography-themed
+ *  signature; it scrolls horizontally on mobile and sits as an even 5-up on desktop. */
 export function SmcFotografie() {
   return (
     <section className="section-shell section-y">
@@ -49,22 +50,47 @@ export function SmcFotografie() {
         </div>
       </div>
 
-      {/* Connected process ribbon */}
-      <div className="relative mt-16">
-        <div
-          aria-hidden="true"
-          className="absolute left-[10%] right-[10%] top-6 hidden h-0.5 bg-lavender lg:block"
-        />
-        <ol className="relative grid grid-cols-2 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
-          {PROZESS.map((schritt, i) => (
-            <li key={schritt} className="flex flex-col items-center px-2 text-center">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-lavender font-display text-lg font-bold text-ink">
-                {i + 1}
-              </span>
-              <span className="mt-4 font-display text-sm font-semibold text-ink">{schritt}</span>
-            </li>
-          ))}
-        </ol>
+      {/* Process — a 35mm film strip: each step is a frame, sprocket holes run along
+          the top and bottom edge. Scrolls horizontally on mobile, even 5-up on desktop. */}
+      <div className="mt-16">
+        <h3 className="font-display text-xl font-semibold text-ink">
+          Der Weg zu erfolgreichem Content
+        </h3>
+        <div className="mt-6 overflow-x-auto no-scrollbar rounded-card bg-ink">
+          <ol className="flex min-w-max lg:min-w-0">
+            {PROZESS.map((schritt) => (
+              <li
+                key={schritt.nr}
+                className="flex w-44 shrink-0 snap-start flex-col border-l border-paper/10 first:border-l-0 lg:w-auto lg:flex-1"
+              >
+                {/* top sprocket holes */}
+                <span aria-hidden="true" className="flex justify-around px-3 pt-3">
+                  <i className="h-2.5 w-4 rounded-sm bg-paper/25" />
+                  <i className="h-2.5 w-4 rounded-sm bg-paper/25" />
+                </span>
+
+                {/* frame */}
+                <div className="flex flex-1 flex-col px-5 py-6">
+                  <span className="font-display text-4xl font-bold leading-none text-lavender">
+                    {schritt.nr}
+                  </span>
+                  <span className="mt-4 font-display text-base font-semibold text-paper">
+                    {schritt.title}
+                  </span>
+                  <span className="mt-2 font-body text-sm leading-snug text-paper/55">
+                    {schritt.desc}
+                  </span>
+                </div>
+
+                {/* bottom sprocket holes */}
+                <span aria-hidden="true" className="flex justify-around px-3 pb-3">
+                  <i className="h-2.5 w-4 rounded-sm bg-paper/25" />
+                  <i className="h-2.5 w-4 rounded-sm bg-paper/25" />
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );
