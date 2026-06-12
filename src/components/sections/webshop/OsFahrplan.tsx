@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface Phase {
@@ -35,11 +34,12 @@ const PHASES: Phase[] = [
   },
 ];
 
-/** Unser Fahrplan — the five project phases as an expanding accordion row:
- *  the active phase opens into a wide teal panel, the rest collapse into
- *  slim cards with vertically set titles (horizontal again on mobile). */
+/** Unser Fahrplan — the five project phases as an alternating timeline: a
+ *  centered dashed spine threads numbered teal nodes from 01 down to the mint
+ *  "Ziel" node, with steps zig-zagging to either side. On mobile the spine
+ *  shifts to a single left rail so every step stays readable. */
 export function OsFahrplan() {
-  const [active, setActive] = useState(0);
+  const last = PHASES.length - 1;
 
   return (
     <section id="fahrplan" className="section-shell section-y">
@@ -56,50 +56,64 @@ export function OsFahrplan() {
         </p>
       </div>
 
-      <div className="mt-12 flex flex-col gap-4 lg:h-[424px] lg:flex-row">
+      <ol className="mt-12 lg:mt-16">
         {PHASES.map((phase, i) => {
-          const isActive = i === active;
-          return isActive ? (
-            <article
+          const isGoal = i === last;
+          const rightSide = i % 2 === 0; // at md+: 01/03/05 right, 02/04 left
+          return (
+            <li
               key={phase.num}
-              className="relative flex-1 overflow-hidden rounded-card bg-teal-deep p-8 text-paper md:p-11 lg:min-w-0"
+              className="grid grid-cols-[3rem_1fr] gap-x-6 md:grid-cols-[1fr_3rem_1fr] md:gap-x-10"
             >
-              <span
-                aria-hidden="true"
-                className="absolute right-8 top-8 font-display text-4xl font-bold tracking-display text-paper md:right-11 md:top-10 md:text-5xl"
-              >
-                {phase.num}
-              </span>
-              <h3 className="max-w-[calc(100%-5rem)] font-display text-[2rem] font-semibold leading-[1.1] tracking-tight text-paper md:text-[3rem]">
-                {phase.title}
-              </h3>
-              <p className="mt-7 max-w-xl font-body text-lg leading-relaxed text-paper md:mt-10">
-                {phase.body}
-              </p>
-            </article>
-          ) : (
-            <button
-              key={phase.num}
-              type="button"
-              onClick={() => setActive(i)}
-              aria-expanded={false}
-              className={cn(
-                "flex items-center rounded-card border border-teal-deep px-7 py-5 text-left transition-colors hover:bg-teal-deep/5",
-                "lg:w-[143px] lg:shrink-0 lg:justify-center lg:px-0",
-              )}
-            >
-              <span
+              {/* centered rail: numbered node + dashed spine down to the next node */}
+              <div className="col-start-1 row-start-1 flex flex-col items-center md:col-start-2">
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    "flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-display text-lg font-bold",
+                    isGoal ? "bg-mint text-ink-soft" : "bg-teal-deep text-paper",
+                  )}
+                >
+                  {phase.num}
+                </span>
+                {!isGoal && (
+                  <span aria-hidden="true" className="w-0 flex-1 border-l-2 border-dashed border-teal-deep" />
+                )}
+              </div>
+
+              {/* content — pad the bottom to give the spine its length between steps */}
+              <div
                 className={cn(
-                  "font-display text-xl font-semibold leading-tight tracking-tight text-teal-deep md:text-2xl",
-                  "lg:[writing-mode:vertical-rl] lg:rotate-180 lg:text-center",
+                  "col-start-2 row-start-1 flex flex-col",
+                  isGoal ? "pb-2" : "pb-12",
+                  rightSide
+                    ? "md:col-start-3 md:items-start md:text-left"
+                    : "md:col-start-1 md:items-end md:text-right",
                 )}
               >
-                {phase.title}
-              </span>
-            </button>
+                <div
+                  className={cn(
+                    "flex flex-wrap items-center gap-x-4 gap-y-2",
+                    !rightSide && "md:flex-row-reverse",
+                  )}
+                >
+                  <h3 className="font-display text-xl font-semibold leading-snug tracking-tight text-ink md:text-2xl">
+                    {phase.title}
+                  </h3>
+                  {isGoal && (
+                    <span className="rounded-pill bg-mint px-4 py-1.5 font-display text-sm font-semibold text-ink">
+                      ZIEL
+                    </span>
+                  )}
+                </div>
+                <p className="mt-3 max-w-md font-body text-base leading-relaxed text-ink md:text-lg">
+                  {phase.body}
+                </p>
+              </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
     </section>
   );
 }
